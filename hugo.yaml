@@ -1,0 +1,48 @@
+baseURL: "https://matthewsmason.github.io"
+languageCode: en-us
+title: Matthew S. Mason
+theme: PaperModX
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20    # Adjust this number to control menu order
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30    # Adjust this number to control menu order
+
+params:
+    defaultTheme: dark
+    TocSide: 'right'
+    ShowBreadCrumbs: true
+    ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: true  # This ensures all pages are shown in archive
+    
+    homeInfoParams:
+        Title: Welcome to My Little Corner of the Web. 👋
+        Content: |
+            My name is Matthew S. Mason. I am a father, husband, natural philosopher, technophile, and avid gamer.
+            
+             **This site is a place for me to share my thoughts, experiences, and interests.** I hope what you find here is thought provoking and peaks your interest. 
+             
+             You can also find me on Mastodon and Instagram! (Although I don't really post much)
+
+    socialIcons:
+     - name: mastodon
+       url: "https://mastodon.social/@matthewsmason"
+     - name: instagram
+       url: "https://www.instagram.com/msmason13/"
+  
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON  # Enables search functionality
