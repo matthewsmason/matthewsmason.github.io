@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "matthewmason.blog",
-    ignorePatterns: ["private", "templates", ".obsidian", "Assets"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
 	theme: {
 	  cdnCaching: true,
