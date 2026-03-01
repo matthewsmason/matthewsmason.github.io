@@ -35,18 +35,19 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-	  sortFn: (a, b) => {
-		const pinned = ["about", "journal"];
-		const aIndex = pinned.indexOf(a.name.toLowerCase());
-		const bIndex = pinned.indexOf(b.name.toLowerCase());
+		sortFn: (a, b) => {
+		  if (!a.name || !b.name) return 0;
+		  const pinned = ["about", "journal"];
+		  const aIndex = pinned.indexOf(a.name.toLowerCase());
+		  const bIndex = pinned.indexOf(b.name.toLowerCase());
 
-		if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-		if (aIndex !== -1) return -1;
-		if (bIndex !== -1) return 1;
+		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		  if (aIndex !== -1) return -1;
+		  if (bIndex !== -1) return 1;
 
-		return a.name.localeCompare(b.name);
-	  },
-	  filterFn: (node) => node.name !== "Assets",
+		  return a.name.localeCompare(b.name);
+		},
+		filterFn: (node) => node.name !== "Assets",
 	}),
   ],
   right: [
@@ -72,18 +73,19 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-	  sortFn: (a, b) => {
-		const pinned = ["about", "journal"];
-		const aIndex = pinned.indexOf(a.name.toLowerCase());
-		const bIndex = pinned.indexOf(b.name.toLowerCase());
+		sortFn: (a, b) => {
+		  if (!a.name || !b.name) return 0;
+		  const pinned = ["about", "journal"];
+		  const aIndex = pinned.indexOf(a.name.toLowerCase());
+		  const bIndex = pinned.indexOf(b.name.toLowerCase());
 
-		if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-		if (aIndex !== -1) return -1;
-		if (bIndex !== -1) return 1;
+		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		  if (aIndex !== -1) return -1;
+		  if (bIndex !== -1) return 1;
 
-		return a.name.localeCompare(b.name);
-	  },
-	  filterFn: (node) => node.name !== "Assets",
+		  return a.name.localeCompare(b.name);
+		},
+		filterFn: (node) => node.name !== "Assets",
 	}),
   ],
   right: [],
