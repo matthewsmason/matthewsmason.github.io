@@ -35,7 +35,18 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-		filterFn: (node) => node.name !== "Assets",
+	  sortFn: (a, b) => {
+		const pinned = ["about", "journal"];
+		const aIndex = pinned.indexOf(a.name.toLowerCase());
+		const bIndex = pinned.indexOf(b.name.toLowerCase());
+
+		if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		if (aIndex !== -1) return -1;
+		if (bIndex !== -1) return 1;
+
+		return a.name.localeCompare(b.name);
+	  },
+	  filterFn: (node) => node.name !== "Assets",
 	}),
   ],
   right: [
@@ -61,7 +72,18 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-		filterFn: (node) => node.name !== "Assets",
+	  sortFn: (a, b) => {
+		const pinned = ["about", "journal"];
+		const aIndex = pinned.indexOf(a.name.toLowerCase());
+		const bIndex = pinned.indexOf(b.name.toLowerCase());
+
+		if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		if (aIndex !== -1) return -1;
+		if (bIndex !== -1) return 1;
+
+		return a.name.localeCompare(b.name);
+	  },
+	  filterFn: (node) => node.name !== "Assets",
 	}),
   ],
   right: [],
