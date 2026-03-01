@@ -1,0 +1,128 @@
+---
+tags:
+  - scripture
+  - faith
+  - morality
+  - spiritual-deconstruction
+---
+Most cherry-pick good scripture verses to share and wave around as support for a particular view. These cherry-picked verses are some that I find problematic. These verses also helped contribute to [[My Faith Crisis]] and subsequent deconstruction. 
+
+## Abortion
+
+**The Trial of Bitter Waters**
+**Numbers 5:11-31**
+22 And this water that causeth the curse shall go into thy bowels, to make thy belly to swell, and thy thigh to rot: And the woman shall say, Amen, amen.
+
+## Children
+
+**Child sacrifice?**
+**Exodus 22:28-30**
+> Thou shalt not revile the gods, nor curse the ruler of thy people.
+> Thou shalt not delay to offer the first of thy ripe fruits, and of thy liquors: the firstborn of thy sons shalt thou give unto me.
+> Likewise shalt thou do with thine oxen, and with thy sheep: seven days it shall be with his dam; on the eighth day thou shalt give it me
+
+**Deuteronomy 21:18-21**
+> And they shall say unto the elders of his city, This our son is stubborn and rebellious, he will not obey our voice; he is a glutton, and a drunkard.
+> And all the men of his city shall stone him with stones, that he die: so shalt thou put evil away from among you; and all Israel shall hear, and fear.
+
+**2 Samuel 12:13-18** - God kills David’s son as punishment. 
+
+**Isaiah 13:16** 
+> Their children also shall be dashed to pieces before their eyes; their houses shall be spoiled⁠, and their wives ravished.
+
+**Book of Job** - God killed children, women, etc. 
+
+**2 Kings 2:24**
+> And he turned back, and looked on them, and cursed them in the name of the Lord⁠. And there came forth two she bears out of the wood, and tare forty and two children of them.
+ 
+## Evil (From God)
+
+**Isaiah 45:7**
+> I form the light⁠, and create darkness: I make peace, and create evil⁠: I the Lord do all these things.
+
+## Genocide
+
+**Numbers 31:17-18**
+> Now therefore kill every male among the little ones, and kill every woman that hath known man by lying with him.
+> But all the women children⁠, that have not known a man by lying with him, keep alive for yourselves.
+
+**Deuteronomy 7:2**
+> And when the Lord thy God shall deliver them before thee; thou shalt smite them, and utterly destroy them; thou shalt make no covenant with them, nor shew mercy unto them.
+
+**1 Samuel 15:3**
+> Now go and smite Amalek, and utterly destroy all that they have, and spare them not; but slay both man and woman, infant and suckling, ox and sheep, camel and ass.
+
+## Killing
+
+**Numbers 31:14-18**
+> And Moses was wroth with the officers of the host, with the captains over thousands, and captains over hundreds, which came from the battle.
+> And Moses said unto them, Have ye saved all the women alive?
+> Behold, these caused the children of Israel, through the counsel of Balaam, to commit trespass against the Lord in the matter of Peor, and there was a plague among the congregation of the Lord⁠.
+> Now therefore kill every male among the little ones, and kill every woman that hath known man by lying with him.
+> But all the women children⁠, that have not known a man by lying with him, keep alive for yourselves.
+
+**2 Samuel 24:10-17** / **Chronicles 21:7-17** 
+- Killing 70,000 men due to David’s sin as punishment. 
+
+**1 Kings 18:16-40** - Elijah kills 450 prophets of Baal. 
+
+**2 Kings 1:9-15** - Elijah and God kill 100 messengers. 
+
+## Polygamy
+
+**Genesis 29** - Jacob marries Leah and Rachel.
+
+**D&C 132:54** 
+> And I command mine handmaid, Emma Smith, to abide and cleave unto my servant Joseph, and to none else. But if she will not abide this commandment she shall be destroyed⁠, saith the Lord; for I am the Lord thy God, and will destroy her if she abide not in my law.
+
+## Slavery
+
+**Numbers 31:18** - Sexual Slavery, See Genocide
+
+**Exodus 21:2-6**
+> If thou buy an Hebrew servant⁠, six years he shall serve: and in the seventh he shall go out free for nothing.
+> If he came in by himself⁠, he shall go out by himself: if he were married, then his wife shall go out with him.
+> If his master have given him a wife, and she have born him sons or daughters; the wife and her children shall be her master’s, and he shall go out by himself. 
+> And if the servant shall plainly say, I love my master, my wife, and my children; I will not go out free:
+> Then his master shall bring him unto the judges⁠; he shall also bring him to the door, or unto the door post; and his master shall bore his earth rough with an awl; and he shall serve him for ever.
+
+**Exodus 21:20-21**
+> And if a man smite his servant, or his maid, with a rod, and he die under his hand; he shall be surely punished⁠. Notwithstanding, if he continue day or two, he shall not be punished⁠: for he is his money.
+
+**Leviticus 25:44-46**
+> Both thy bondmen, and thy bondmaids, which thou shalt have, shall be of the heathen that are round about you; of them shall ye buy bondmen and bondmaids. 
+> Moreover of the children of the strangers that do sojourn among you, of them shall ye buy, and of their families that are with you, which they begat in your land: and they shall be your possession. 
+> And ye shall take them as an inheritance for your children after you, to inherit them for a possession; they shall be your bondmen for ever⁠: but over your brethren the children of Israel, ye shall not rule one over another with rigour.
+
+**1 Timothy 6:1-2**
+> Let as many servants as are under the yoke count their own masters worthy of all honour, that the name of God and his doctrine be not blasphemed.
+> And they that have believing masters, let them not despise them, because they are brethren⁠; but rather do them service⁠, because they are faithful and beloved, partakers of the benefit. These things teach and exhort.
+
+**Ephesians 6:5**
+> Servants⁠, be obedient to them that are your masters according to the flesh, with fear and trembling, in singleness of your heart, as unto Christ;
+## Women
+
+**Numbers 5:11-31** - See Abortion / **The Trial of Bitter Waters**
+
+**Isaiah 13:16** - See Children
+
+**Genesis 19:8**
+> Behold now, I have two daughters which have not known man; let me, I pray you, bring them out unto you, and do ye to them as is good in your eyes: only unto these men do nothing; for therefore came they under the shadow of my roof.
+
+**1 Timothy 2:11-12**
+> Let the woman learn in silence with all subjection. But I suffer not a woman to teach⁠, nor to usurp authority over the man, but to be in silence⁠.
+
+**Deuteronomy 22:29**
+> Then the man that lay with her shall give unto the damsel’s father fifty shekels of silver, and she shall be his wife⁠; because he hath humbled her, he may not put her away all his days.
+
+**2 Samuel 12:11-12** - David’s punishment.
+> Thus saith the Lord⁠, Behold, I will raise up evil against thee out of thine own house, and I will take thy wives before thine eyes, and give them unto thy neighbor, and he shall lie with thy wives in the sight of this sun.
+
+**1 Timothy 2:11-14**
+> Let the woman learn in silence with all subjection.
+> But I suffer not a woman to teach⁠, nor to usurp authority over the man, but to be in silence⁠.
+> For Adam was first formed⁠, then Eve.
+> And Adam was not deceived, but the woman being deceived was in the transgression⁠.
+
+**1 Corinthians 14:34**
+> Let your women keep silence in the churches: for it is not permitted unto them to speak; but *they are commanded* to be under obedience, as also saith the law.
