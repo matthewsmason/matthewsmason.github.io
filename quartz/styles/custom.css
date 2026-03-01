@@ -89,7 +89,7 @@ code, pre {
 
 /* Sidebar title / site name */
 .page-title {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--darkgray);
@@ -109,7 +109,7 @@ code, pre {
 /* Main content area */
 article {
   max-width: 740px;
-  padding: 2rem 2.5rem;
+  padding: 2rem 2.5rem 2rem 3.5rem;
 }
 
 /* Links */
