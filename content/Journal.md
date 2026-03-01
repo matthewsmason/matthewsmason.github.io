@@ -1,5 +1,5 @@
-[[index]]
-
+---
+title: Journal
 ---
 # 📄 Pages
 *Updates from day to day.*
