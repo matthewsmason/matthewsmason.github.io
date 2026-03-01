@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* =====================
+   THINGS-INSPIRED PALETTE
+   ===================== */
+
+:root {
+  /* Light mode */
+  --light-bg: #f5f6f8;
+  --light-bg-secondary: #ecedef;
+  --light-text: #2e3338;
+  --light-text-muted: #8b8e96;
+  --light-border: #dddfe4;
+  --light-accent: #0079d9;
+  --light-accent-hover: #005faa;
+
+  /* Dark mode */
+  --dark-bg: #1e1f22;
+  --dark-bg-secondary: #26282c;
+  --dark-text: #dcdee2;
+  --dark-text-muted: #6b6f7a;
+  --dark-border: #35383f;
+  --dark-accent: #4493f8;
+  --dark-accent-hover: #2f7de0;
+}
+
+/* Apply light mode */
+:root[saved-theme="light"] {
+  --light: var(--light-bg);
+  --lightgray: var(--light-border);
+  --gray: var(--light-text-muted);
+  --darkgray: var(--light-text);
+  --dark: #1e1f22;
+  --secondary: var(--light-accent);
+  --tertiary: var(--light-accent-hover);
+  --highlight: rgba(0, 121, 217, 0.08);
+}
+
+/* Apply dark mode */
+:root[saved-theme="dark"] {
+  --light: var(--dark-bg);
+  --lightgray: var(--dark-border);
+  --gray: var(--dark-text-muted);
+  --darkgray: var(--dark-text);
+  --dark: #f0f1f3;
+  --secondary: var(--dark-accent);
+  --tertiary: var(--dark-accent-hover);
+  --highlight: rgba(68, 147, 248, 0.1);
+}
+
+/* =====================
+   TYPOGRAPHY
+   ===================== */
+
+:root {
+  --bodyFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --headerFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --codeFont: "JetBrains Mono", "Fira Code", monospace;
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+code, pre {
+  font-family: var(--codeFont);
+  font-size: 0.875em;
+}
+
+/* =====================
+   LAYOUT & SIDEBAR
+   ===================== */
+
+/* Sidebar */
+#quartz-body .sidebar {
+  border-right: 1px solid var(--lightgray);
+  background-color: var(--light);
+  padding: 1.5rem 1rem;
+}
+
+/* Sidebar title / site name */
+.page-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--darkgray);
+}
+
+/* Explorer folder/file items */
+.folder-title, .file-title {
+  font-size: 0.9rem;
+  color: var(--gray);
+  transition: color 0.15s ease;
+}
+
+.folder-title:hover, .file-title:hover {
+  color: var(--secondary);
+}
+
+/* Main content area */
+article {
+  max-width: 740px;
+  padding: 2rem 2.5rem;
+}
+
+/* Links */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--tertiary);
+  text-decoration: underline;
+}
+
+/* Tags — Things-style pill tags */
+.tag-link {
+  background-color: var(--highlight);
+  color: var(--secondary);
+  border-radius: 999px;
+  padding: 0.15em 0.75em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: background 0.15s ease;
+}
+
+.tag-link:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+  text-decoration: none;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--secondary);
+  background: var(--highlight);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  color: var(--darkgray);
+  font-style: normal;
+}
+
+/* Code blocks */
+pre {
+  border-radius: 8px;
+  border: 1px solid var(--lightgray);
+  padding: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--lightgray);
+  margin: 2rem 0;
+}

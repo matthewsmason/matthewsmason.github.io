@@ -1,6 +1,13 @@
 ---
 title: Journal
 ---
+# 📜 Reflections
+*Thoughts worth returning to.*
+
+- [[My Faith Crisis]]
+- [[My Favorite Quotes]]
+
+---
 # 📄 Pages
 *Updates from day to day.*
 
@@ -23,13 +30,6 @@ title: Journal
 - [[2026-1-28]] - Fourteen Fundamentals in Following the Prophet
 - [[2026-02-23]] - Church Talks on Evolution Deep-dive
 - [[2026-02-24]] - The Church's COVID-19 Response
-
----
-# 📜 Reflections
-*Thoughts worth returning to.*
-
-- [[My Faith Crisis]]
-- [[My Favorite Quotes]]
 
 ---
 # 📃 Entries
