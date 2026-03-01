@@ -9,5 +9,4 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-content/Assets
 content/Private
