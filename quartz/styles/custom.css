@@ -98,7 +98,7 @@ h2.page-title a {
 /* Explorer folder/file items */
 .folder-title, .file-title {
   font-size: 0.9rem;
-  color: var(--gray);
+  color: var(--secondary);
   transition: color 0.15s ease;
 }
 
