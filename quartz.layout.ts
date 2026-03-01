@@ -7,7 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   Component.Footer({
-	}),
+  links: {
+    GitHub: "https://github.com/...",
+    "Discord Community": "https://discord.gg/...",
+  },
+}),
 }
 
 // components for pages that display a single page (e.g. a single note)
