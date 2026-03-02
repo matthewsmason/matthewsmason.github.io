@@ -200,15 +200,9 @@ hr {
     font-size: 0.8rem;
     padding: 1rem;
   }
-	  /* Make folder titles look and feel non-clickable */
-  .folder-title {
-	  cursor: default;
-	  pointer-events: none;  /* disables click entirely on the label */
-	}
 
 	/* Re-enable pointer events on the toggle arrow only */
-  .folder-icon {
-	  pointer-events: all;
-	  cursor: pointer;
-	}
+  .folder-button .folder-title {
+	font-size: 1.4rem;
+  }
 }
