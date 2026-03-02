@@ -103,6 +103,10 @@ em {
   overflow: visible !important;
 }
 
+.graph {
+  padding-left: 5rem;
+}
+
 /* Sidebar title / site name */
 h2.page-title a {
   font-size: 1.4rem;
