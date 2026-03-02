@@ -103,10 +103,6 @@ em {
   overflow: visible !important;
 }
 
-.graph {
-  margin-left: 2rem;
-}
-
 /* Sidebar title / site name */
 h2.page-title a {
   font-size: 1.4rem;
@@ -195,5 +191,11 @@ hr {
 @media (min-width: 1200px) {
   #quartz-body .right.sidebar {
     border-left: 1px solid var(--lightgray);
+  }
+}
+
+@media (max-width: 1200px) {
+  .graph {
+    margin-left: 2rem;
   }
 }
