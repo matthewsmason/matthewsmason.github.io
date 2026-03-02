@@ -244,24 +244,26 @@ a {
       }
     }
 
-    & .sidebar.right {
-      grid-area: grid-sidebar-right;
-      margin-right: 0;
-      flex-direction: column;
+	& .sidebar.right {
+	  grid-area: grid-sidebar-right;
+	  margin-right: 0;
+	  flex-direction: column;
+	  height: auto;
+	  overflow-y: visible;
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;
       }
-      @media all and not ($desktop) {
-        position: initial;
-        height: unset;
-        width: 100%;
-        flex-direction: row;
-        padding: 0;
-        & > * {
-          flex: 1;
-          max-height: 24rem;
-        }
+	  @media all and not ($desktop) {
+	    position: initial;
+	    height: unset;
+	    width: 100%;
+	    flex-direction: row;
+	    padding: 0;
+	    & > * {
+	  	flex: 1;
+		max-height: none;
+	  }
         & > .toc {
           display: none;
         }
