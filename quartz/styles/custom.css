@@ -126,8 +126,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.explorer a.active {
-  color: #FF82B2;
+.explorer a.active,
+.explorer a.active span {
+  color: #FF82B2 !important;
 }
 
 /* Tags — Things-style pill tags */
