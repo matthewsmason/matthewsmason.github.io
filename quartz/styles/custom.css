@@ -122,8 +122,8 @@ h2.page-title a {
 
 /* Main content padding */
 div.center {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
   min-width: 0 !important;
 }
 
