@@ -170,7 +170,7 @@ hr {
    MOBILE FIXES
    ===================== */
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   /* Remove the fixed padding that breaks mobile layout */
   div.center {
     padding-left: 1rem;
@@ -186,7 +186,7 @@ hr {
 
   /* Slightly larger base font for readability on small screens */
   body {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0;
   }
 
