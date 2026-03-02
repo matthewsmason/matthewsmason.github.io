@@ -93,7 +93,6 @@ em {
 }
 
 #quartz-body .right.sidebar {
-  border-left: 1px solid var(--lightgray);
   height: auto !important;
   max-height: none !important;
   overflow-y: visible !important;
@@ -189,9 +188,8 @@ hr {
   margin: 2rem 0;
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
   #quartz-body .right.sidebar {
-    border-left: none;
-    border-top: none;
+    border-left: 1px solid var(--lightgray);
   }
 }
