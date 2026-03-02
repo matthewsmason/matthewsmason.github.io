@@ -202,7 +202,6 @@ hr {
   }
 
   /* Force the sidebar to stack components vertically and grow in height */
-  #quartz-body .left.sidebar,
   #quartz-body .right.sidebar {
     /* Switch from flex to block to force natural height expansion */
     display: block !important; 
