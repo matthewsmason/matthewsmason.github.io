@@ -85,15 +85,10 @@ em {
    ===================== */
 
 /* Sidebar */
-#quartz-body .left.sidebar {
+#quartz-body .sidebar {
   border-right: 1px solid var(--lightgray);
   background-color: var(--light);
   padding: 1.5rem 1rem;
-}
-
-#quartz-body {
-  display: grid;
-  grid-template-columns: 320px 1fr 320px;
 }
 
 /* Sidebar title / site name */
