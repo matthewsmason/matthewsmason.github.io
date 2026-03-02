@@ -203,6 +203,8 @@ hr {
 #quartz-body .right.sidebar {
   border-right: none;
   border-left: none;
+  height: auto !important;
+  max-height: none !important;
   border-bottom: 1px solid var(--lightgray);
   padding: 1rem 0.75rem;
 }
