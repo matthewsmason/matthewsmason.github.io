@@ -227,5 +227,11 @@ hr {
 	/* Re-enable pointer events on the toggle arrow only */
   .folder-button .folder-title {
 	font-size: 1.1rem;
+  }	
+  
+  .overflow {
+    overflow: visible !important;
+    max-height: none !important;
   }
+
 }
