@@ -198,14 +198,27 @@ hr {
     padding-right: 1rem;
   }
 
-  /* Ensure sidebar doesn't bleed into content on mobile */
+ /* Ensure sidebar expands with its content (Backlinks) on mobile */
   #quartz-body .left.sidebar,
   #quartz-body .right.sidebar {
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid var(--lightgray);
-	padding: 1rem 0.75rem;
-}
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--lightgray);
+    padding: 1rem 0.75rem;
+    
+    /* New fixes to allow expansion */
+    height: auto !important;
+    max-height: none !important;
+    flex: none !important; 
+    overflow: visible !important;
+  }
+
+  /* Specifically ensure the backlinks list within the sidebar can grow */
+  .backlinks, 
+  .backlinks ul {
+    height: auto !important;
+    overflow: visible !important;
+  }
 
   /* Slightly larger base font for readability on small screens */
   body {
