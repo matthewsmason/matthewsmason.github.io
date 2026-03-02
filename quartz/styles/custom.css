@@ -103,6 +103,12 @@ em {
   overflow: visible !important;
 }
 
+.backlinks .overflow,
+.backlinks ul {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
 /* Sidebar title / site name */
 h2.page-title a {
   font-size: 1.4rem;
