@@ -195,53 +195,53 @@ hr {
    MOBILE FIXES
    ===================== */
 
+/* =====================
+   MOBILE FIXES
+   ===================== */
+
 @media (max-width: 760px) {
+  /* Fix for Hamburger/Header Overlap */
+  header {
+    margin-bottom: 2rem;
+    z-index: 100;
+  }
+
   div.center {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 1rem;
   }
 
-  /* Force the sidebar to stack components vertically and grow in height */
-  #quartz-body .right.sidebar {
-    /* Switch from flex to block to force natural height expansion */
-    display: block !important; 
-    height: fit-content !important; 
-    min-height: min-content !important;
-    max-height: none !important;
-    
-    /* Kill any sticky/fixed behavior inherited from desktop */
-    position: relative !important;
-    top: auto !important;
-    overflow: visible !important;
-    
-    /* Ensure the background color covers the new expanded area */
-    background-color: var(--light) !important; 
-  }
-
-  .backlinks {
+  /* Reset the left sidebar so the hamburger menu works correctly */
+  #quartz-body .left.sidebar {
     display: block !important;
-    margin-bottom: 2rem;
     height: auto !important;
   }
 
-  .graph {
+  /* Force the right sidebar (Backlinks) to expand its background */
+  #quartz-body .right.sidebar {
+    display: block !important; /* Use block instead of flex to force natural height */
+    height: auto !important;
+    min-height: min-content !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background-color: var(--light) !important; /* Ensure background color persists */
+    border-top: 1px solid var(--lightgray);
+    margin-top: 2rem;
+  }
+
+  /* Ensure the backlinks list pushes the container height */
+  .backlinks, 
+  .backlinks ul {
     display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Keep the graph at a set height so it doesn't vanish */
+  .graph {
     height: 350px !important;
-    width: 100% !important;
-  }
-
-  body {
-    font-size: 1rem;
-    letter-spacing: 0;
-  }
-
-  pre {
-    overflow-x: auto;
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-
-  .folder-button .folder-title {
-    font-size: 1.1rem;
+    width: 80% !important;
+    margin-bottom: 2rem;
   }
 }
