@@ -35,12 +35,10 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-		folderClickBehavior: "collapse",
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
-		  const pinned = ["about", "journal"];
-		  const notesSubfolderOrder = ["reflections", "pages", "entries"];
 
+		  const pinned = ["about", "journal"];
 		  const aIndex = pinned.indexOf(a.name.toLowerCase());
 		  const bIndex = pinned.indexOf(b.name.toLowerCase());
 
@@ -48,12 +46,17 @@ export const defaultContentPageLayout: PageLayout = {
 		  if (aIndex !== -1) return -1;
 		  if (bIndex !== -1) return 1;
 
-		  const aInNotes = a.file?.slug?.startsWith("notes/") ?? false;
-		  const bInNotes = b.file?.slug?.startsWith("notes/") ?? false;
-		  const aSubIndex = aInNotes ? notesSubfolderOrder.indexOf(a.name.toLowerCase()) : -1;
-		  const bSubIndex = bInNotes ? notesSubfolderOrder.indexOf(b.name.toLowerCase()) : -1;
-
-		  if (aSubIndex !== -1 && bSubIndex !== -1) return aSubIndex - bSubIndex;
+		  // Custom order for Notes subfolders only (depth 2 = inside Notes)
+		  if (a.depth === 2 && b.depth === 2) {
+			const notesOrder: Record<string, number> = {
+			  reflections: 0,
+			  pages: 1,
+			  entries: 2,
+			};
+			const aSubIndex = notesOrder[a.name.toLowerCase()] ?? 999;
+			const bSubIndex = notesOrder[b.name.toLowerCase()] ?? 999;
+			if (aSubIndex !== bSubIndex) return aSubIndex - bSubIndex;
+		  }
 
 		  return a.name.localeCompare(b.name);
 		},
@@ -86,9 +89,8 @@ export const defaultListPageLayout: PageLayout = {
 		folderClickBehavior: "collapse",
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
-		  const pinned = ["about", "journal"];
-		  const notesSubfolderOrder = ["reflections", "pages", "entries"];
 
+		  const pinned = ["about", "journal"];
 		  const aIndex = pinned.indexOf(a.name.toLowerCase());
 		  const bIndex = pinned.indexOf(b.name.toLowerCase());
 
@@ -96,12 +98,17 @@ export const defaultListPageLayout: PageLayout = {
 		  if (aIndex !== -1) return -1;
 		  if (bIndex !== -1) return 1;
 
-		  const aInNotes = a.file?.slug?.startsWith("notes/") ?? false;
-		  const bInNotes = b.file?.slug?.startsWith("notes/") ?? false;
-		  const aSubIndex = aInNotes ? notesSubfolderOrder.indexOf(a.name.toLowerCase()) : -1;
-		  const bSubIndex = bInNotes ? notesSubfolderOrder.indexOf(b.name.toLowerCase()) : -1;
-
-		  if (aSubIndex !== -1 && bSubIndex !== -1) return aSubIndex - bSubIndex;
+		  // Custom order for Notes subfolders only (depth 2 = inside Notes)
+		  if (a.depth === 2 && b.depth === 2) {
+			const notesOrder: Record<string, number> = {
+			  reflections: 0,
+			  pages: 1,
+			  entries: 2,
+			};
+			const aSubIndex = notesOrder[a.name.toLowerCase()] ?? 999;
+			const bSubIndex = notesOrder[b.name.toLowerCase()] ?? 999;
+			if (aSubIndex !== bSubIndex) return aSubIndex - bSubIndex;
+		  }
 
 		  return a.name.localeCompare(b.name);
 		},
