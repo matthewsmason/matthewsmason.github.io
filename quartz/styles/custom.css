@@ -76,6 +76,10 @@ code, pre {
   font-size: 0.875em;
 }
 
+em {
+  color: #FF82B2;
+}
+
 /* =====================
    LAYOUT & SIDEBAR
    ===================== */
@@ -95,7 +99,6 @@ h2.page-title a {
   color: var(--darkgray);
 }
 
-/* Explorer folder/file items */
 .folder-title, .file-title {
   font-size: 0.9rem;
   color: var(--secondary);
@@ -121,6 +124,10 @@ a {
 a:hover {
   color: var(--tertiary);
   text-decoration: underline;
+}
+
+.explorer a.active {
+  color: #FF82B2;
 }
 
 /* Tags — Things-style pill tags */
