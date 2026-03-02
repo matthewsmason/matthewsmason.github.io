@@ -54,6 +54,7 @@
   --bodyFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --headerFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --codeFont: "JetBrains Mono", "Fira Code", monospace;
+  --pageWidth: 750px;
 }
 
 body {
