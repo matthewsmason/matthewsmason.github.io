@@ -93,9 +93,9 @@ em {
 }
 
 #quartz-body .right.sidebar {
-  border-left: 1px solid var(--lightgray);
-  background-color: var(--light);
-  padding: 1.5rem 1rem;
+  height: auto !important;
+  min-height: unset !important;
+  align-self: flex-start;
 }
 
 .right.sidebar .overflow {
@@ -185,4 +185,11 @@ hr {
   border: none;
   border-top: 1px solid var(--lightgray);
   margin: 2rem 0;
+}
+
+@media (max-width: 1200px) {
+  #quartz-body .right.sidebar {
+    border-left: none;
+    border-top: 1px solid var(--lightgray);
+  }
 }
