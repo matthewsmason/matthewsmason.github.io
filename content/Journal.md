@@ -5,7 +5,7 @@ title: Journal
 *Thoughts worth returning to.*
 
 - [[My Faith Crisis]]
-- [[My Favorite Quotes]]
+- [[Quotes]]
 
 ---
 # 📄 Pages
