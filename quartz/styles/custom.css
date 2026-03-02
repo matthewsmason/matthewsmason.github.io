@@ -186,7 +186,7 @@ hr {
 
   /* Slightly larger base font for readability on small screens */
   body {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0;
   }
 
@@ -203,6 +203,6 @@ hr {
 
 	/* Re-enable pointer events on the toggle arrow only */
   .folder-button .folder-title {
-	font-size: 1.4rem;
+	font-size: 1.1rem;
   }
 }
