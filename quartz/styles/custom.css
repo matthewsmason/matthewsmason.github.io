@@ -203,27 +203,27 @@ hr {
 
   /* Force the sidebar to stack components vertically and grow in height */
   #quartz-body .left.sidebar,
+  /* Add this inside your @media (max-width: 760px) block */
   #quartz-body .right.sidebar {
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid var(--lightgray);
-    padding: 1rem 0.75rem;
-    
-    display: flex !important;
-    flex-direction: column !important; /* Forces Graph and Backlinks to stack */
-    height: auto !important;
-    max-height: none !important;
-    flex: none !important; 
-    overflow: visible !important;
+	display: flex !important;
+	flex-direction: column !important; /* Force Graph and Backlinks to stack vertically */
+	height: auto !important;
+	max-height: none !important;
+	overflow: visible !important;
   }
 
-  /* Ensure the backlinks list itself doesn't trap the height */
+/* Ensure the backlinks container and its list expand fully */
   .backlinks, 
   .backlinks ul {
-    height: auto !important;
-    overflow: visible !important;
-    display: block !important;
+	height: auto !important;
+	overflow: visible !important;
+	display: block !important;
   }
+
+/* Optional: Add spacing between the Graph and Backlinks so they don't touch */
+  .backlinks {
+	margin-top: 2rem;
+  } 
 
   /* Give the graph a fixed height so it doesn't disappear when stacked */
   .graph {
