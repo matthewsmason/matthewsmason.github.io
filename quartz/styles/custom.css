@@ -54,7 +54,7 @@
   --bodyFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --headerFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --codeFont: "JetBrains Mono", "Fira Code", monospace;
-  --pageWidth: 900px;
+  --pageWidth: 1200px;
 }
 
 body {
@@ -199,13 +199,13 @@ hr {
   }
 
   /* Ensure sidebar doesn't bleed into content on mobile */
-#quartz-body .left.sidebar,
-#quartz-body .right.sidebar {
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid var(--lightgray);
-  padding: 1rem 0.75rem;
-}
+  #quartz-body .left.sidebar,
+  #quartz-body .right.sidebar {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--lightgray);
+    padding: 1rem 0.75rem;
+  }
 
   /* Slightly larger base font for readability on small screens */
   body {
