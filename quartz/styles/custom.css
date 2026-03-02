@@ -114,6 +114,7 @@ h2.page-title a {
 div.center {
   padding-left: 2rem;
   padding-right: 2rem;
+  min-width: 0 !important;
 }
 
 /* Links */
