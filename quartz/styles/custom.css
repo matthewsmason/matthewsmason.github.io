@@ -54,7 +54,7 @@
   --bodyFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --headerFont: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --codeFont: "JetBrains Mono", "Fira Code", monospace;
-  --pageWidth: 1200px;
+  --pageWidth: 750px;
 }
 
 body {
@@ -87,7 +87,6 @@ em {
 
 /* Sidebar */
 #quartz-body .left.sidebar {
-  flex-direction: column !important;
   border-right: 1px solid var(--lightgray);
   background-color: var(--light);
   padding: 1.5rem 1rem;
@@ -123,8 +122,8 @@ h2.page-title a {
 
 /* Main content padding */
 div.center {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   min-width: 0 !important;
 }
 
@@ -202,11 +201,11 @@ hr {
   /* Ensure sidebar doesn't bleed into content on mobile */
   #quartz-body .left.sidebar,
   #quartz-body .right.sidebar {
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid var(--lightgray);
-    padding: 1rem 0.75rem;
-  }
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid var(--lightgray);
+	padding: 1rem 0.75rem;
+}
 
   /* Slightly larger base font for readability on small screens */
   body {
@@ -228,11 +227,5 @@ hr {
 	/* Re-enable pointer events on the toggle arrow only */
   .folder-button .folder-title {
 	font-size: 1.1rem;
-  }	
-  
-  .overflow {
-    overflow: visible !important;
-    max-height: none !important;
   }
-
 }
