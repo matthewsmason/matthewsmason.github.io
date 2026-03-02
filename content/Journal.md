@@ -4,16 +4,17 @@ title: Journal
 # 📜 Reflections
 *Thoughts worth returning to.*
 
-- [[My Faith Crisis]]
-- [[Quotes]]
+- [[Favorite Quotes]]
+- [[My Faith Crisis|My Faith Crisis (2025-02-07)]]
+
 
 ---
 # 📄 Pages
 *Updates from day to day.*
 
-- [[2025-4-9]] - CES Letter vs Light & Truth Letter
-- [[2025-4-15]] - Personal Update #1
-- [[2025-4-22]] - Rhett's Spiritual Deconstruction
+- [[2025-04-09]] - CES Letter vs Light & Truth Letter
+- [[2025-04-15]] - Personal Update #1
+- [[2025-04-22]] - Rhett's Spiritual Deconstruction
 - [[2025-04-25]] - Rhett & Brittney Hartley
 - [[2025-05-01]] - Abraham's Sacrifice
 - [[2025-05-09]] - Who is Yahweh?

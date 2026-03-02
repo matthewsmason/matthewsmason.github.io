@@ -119,9 +119,9 @@ Am I to live my life in a lie? Am I to live my life believing in one way while s
 
 I have written a series of update posts as I navigate my faith crisis and spiritual deconstruction from [[The Church of Jesus Christ of Latter-day Saints]] and [[Christianity]] as a whole. 
 
-- [[2025-4-9]] - CES Letter vs Light and Truth Letter
-- [[2025-4-15]] - Personal Update # 1
-- [[2025-4-22]] - Rhett's Spiritual Deconstruction
+- [[2025-04-09]] - CES Letter vs Light and Truth Letter
+- [[2025-04-15]] - Personal Update # 1
+- [[2025-04-22]] - Rhett's Spiritual Deconstruction
 - [[2025-04-25]] - Rhett & Brittney Hartley
 - [[2025-05-01]] - Abraham's Sacrifice
 - [[2025-05-09]] - Who is Yahweh?
