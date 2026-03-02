@@ -200,7 +200,8 @@ hr {
    ===================== */
 
 @media (max-width: 760px) {
-  /* Fix for Hamburger/Header Overlap */
+  /* ... keep your existing header and center fixes here ... */
+
   header {
     margin-bottom: 2rem;
     z-index: 100;
@@ -210,5 +211,25 @@ hr {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
+  }
+
+  /* Target ONLY the right sidebar so we don't break the hamburger menu again */
+  #quartz-body .right.sidebar {
+    display: block !important; /* Force it to stack elements vertically */
+    height: auto !important;    /* Let the height grow with the content */
+    max-height: none !important;
+    overflow: visible !important;
+    
+    /* This ensures the background color covers the entire extended area */
+    background-color: var(--light) !important; 
+    border-top: 1px solid var(--lightgray);
+    padding-bottom: 3rem; /* Extra space at the very bottom of the page */
+  }
+
+  /* Ensure the backlinks list itself is allowed to expand */
+  .backlinks, 
+  .backlinks ul {
+    display: block !important;
+    height: auto !important;
   }
 }
