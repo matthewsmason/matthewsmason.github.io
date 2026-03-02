@@ -15,7 +15,6 @@ const defaultOptions: BacklinksOptions = {
 
 export default ((opts?: Partial<BacklinksOptions>) => {
   const options: BacklinksOptions = { ...defaultOptions, ...opts }
-  const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
 
   const Backlinks: QuartzComponent = ({
     fileData,
@@ -28,28 +27,27 @@ export default ((opts?: Partial<BacklinksOptions>) => {
     if (options.hideWhenEmpty && backlinkFiles.length == 0) {
       return null
     }
-    return (
-      <div class={classNames(displayClass, "backlinks")}>
-        <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
-        <OverflowList>
-          {backlinkFiles.length > 0 ? (
-            backlinkFiles.map((f) => (
-              <li>
-                <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
-                  {f.frontmatter?.title}
-                </a>
-              </li>
-            ))
-          ) : (
-            <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
-          )}
-        </OverflowList>
-      </div>
-    )
+	return (
+	  <div class={classNames(displayClass, "backlinks")}>
+		<h3>{i18n(cfg.locale).components.backlinks.title}</h3>
+		<ul>
+		  {backlinkFiles.length > 0 ? (
+			backlinkFiles.map((f) => (
+			  <li>
+				<a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
+				  {f.frontmatter?.title}
+				</a>
+			  </li>
+			))
+		  ) : (
+			<li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
+		  )}
+		</ul>
+	  </div>
+	)
   }
 
   Backlinks.css = style
-  Backlinks.afterDOMLoaded = overflowListAfterDOMLoaded
 
   return Backlinks
 }) satisfies QuartzComponentConstructor
