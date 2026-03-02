@@ -87,6 +87,7 @@ em {
 
 /* Sidebar */
 #quartz-body .left.sidebar {
+  flex-direction: column !important;
   border-right: 1px solid var(--lightgray);
   background-color: var(--light);
   padding: 1.5rem 1rem;
