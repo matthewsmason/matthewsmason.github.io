@@ -191,14 +191,17 @@ hr {
    MOBILE FIXES
    ===================== */
 
+/* =====================
+   MOBILE FIXES
+   ===================== */
+
 @media (max-width: 760px) {
-  /* Remove the fixed padding that breaks mobile layout */
   div.center {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
- /* Ensure sidebar expands with its content (Backlinks) on mobile */
+  /* Force the sidebar to stack components vertically and grow in height */
   #quartz-body .left.sidebar,
   #quartz-body .right.sidebar {
     border-right: none;
@@ -206,39 +209,41 @@ hr {
     border-bottom: 1px solid var(--lightgray);
     padding: 1rem 0.75rem;
     
-    /* New fixes to allow expansion */
+    display: flex !important;
+    flex-direction: column !important; /* Forces Graph and Backlinks to stack */
     height: auto !important;
     max-height: none !important;
     flex: none !important; 
     overflow: visible !important;
   }
 
-  /* Specifically ensure the backlinks list within the sidebar can grow */
+  /* Ensure the backlinks list itself doesn't trap the height */
   .backlinks, 
   .backlinks ul {
     height: auto !important;
     overflow: visible !important;
+    display: block !important;
   }
 
-  /* Slightly larger base font for readability on small screens */
+  /* Give the graph a fixed height so it doesn't disappear when stacked */
+  .graph {
+    height: 300px !important;
+    width: 100% !important;
+    flex-shrink: 0 !important;
+  }
+
   body {
     font-size: 1rem;
     letter-spacing: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.01em;
-  }
-
-  /* Make sure code blocks don't overflow horizontally */
   pre {
     overflow-x: auto;
     font-size: 0.8rem;
     padding: 1rem;
   }
 
-	/* Re-enable pointer events on the toggle arrow only */
   .folder-button .folder-title {
-	font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 }
