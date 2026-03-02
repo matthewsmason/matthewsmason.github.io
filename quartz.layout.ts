@@ -35,6 +35,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
+		folderClickBehavior: "collapse"
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
 		  const pinned = ["about", "journal"];
@@ -73,6 +74,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
+		folderClickBehavior: "collapse"
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
 		  const pinned = ["about", "journal"];
