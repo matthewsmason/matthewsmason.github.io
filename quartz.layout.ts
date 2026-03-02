@@ -53,8 +53,8 @@ export const defaultContentPageLayout: PageLayout = {
 			pages: 1,
 			entries: 2,
 		  };
-		  const aIsNotesSub = a.slug.startsWith("notes/");
-		  const bIsNotesSub = b.slug.startsWith("notes/");
+			const aIsNotesSub = a.slug.toLowerCase().startsWith("notes/");
+			const bIsNotesSub = b.slug.toLowerCase().startsWith("notes/");
 
 		  if (aIsNotesSub && bIsNotesSub) {
 			const aSubIndex = notesOrder[a.slugSegment.toLowerCase()] ?? 999;
@@ -108,8 +108,8 @@ export const defaultListPageLayout: PageLayout = {
 			pages: 1,
 			entries: 2,
 		  };
-		  const aIsNotesSub = a.slug.startsWith("notes/");
-		  const bIsNotesSub = b.slug.startsWith("notes/");
+			const aIsNotesSub = a.slug.toLowerCase().startsWith("notes/");
+			const bIsNotesSub = b.slug.toLowerCase().startsWith("notes/");
 
 		  if (aIsNotesSub && bIsNotesSub) {
 			const aSubIndex = notesOrder[a.slugSegment.toLowerCase()] ?? 999;
