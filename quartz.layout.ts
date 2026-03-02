@@ -39,12 +39,20 @@ export const defaultContentPageLayout: PageLayout = {
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
 		  const pinned = ["about", "journal"];
+		  const notesSubfolderOrder = ["reflections", "pages", "entries"];
+
 		  const aIndex = pinned.indexOf(a.name.toLowerCase());
 		  const bIndex = pinned.indexOf(b.name.toLowerCase());
+		  const aSubIndex = notesSubfolderOrder.indexOf(a.name.toLowerCase());
+		  const bSubIndex = notesSubfolderOrder.indexOf(b.name.toLowerCase());
 
 		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
 		  if (aIndex !== -1) return -1;
 		  if (bIndex !== -1) return 1;
+
+		  if (aSubIndex !== -1 && bSubIndex !== -1) return aSubIndex - bSubIndex;
+		  if (aSubIndex !== -1) return -1;
+		  if (bSubIndex !== -1) return 1;
 
 		  return a.name.localeCompare(b.name);
 		},
@@ -78,12 +86,20 @@ export const defaultListPageLayout: PageLayout = {
 		sortFn: (a, b) => {
 		  if (!a.name || !b.name) return 0;
 		  const pinned = ["about", "journal"];
+		  const notesSubfolderOrder = ["reflections", "pages", "entries"];
+
 		  const aIndex = pinned.indexOf(a.name.toLowerCase());
 		  const bIndex = pinned.indexOf(b.name.toLowerCase());
+		  const aSubIndex = notesSubfolderOrder.indexOf(a.name.toLowerCase());
+		  const bSubIndex = notesSubfolderOrder.indexOf(b.name.toLowerCase());
 
 		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
 		  if (aIndex !== -1) return -1;
 		  if (bIndex !== -1) return 1;
+
+		  if (aSubIndex !== -1 && bSubIndex !== -1) return aSubIndex - bSubIndex;
+		  if (aSubIndex !== -1) return -1;
+		  if (bSubIndex !== -1) return 1;
 
 		  return a.name.localeCompare(b.name);
 		},
