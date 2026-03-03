@@ -30,6 +30,7 @@ title: Journal
 - [[2026-01-28]] - Fourteen Fundamentals in Following the Prophet
 - [[2026-02-23]] - Church Talks on Evolution Deep-dive
 - [[2026-02-24]] - The Church's COVID-19 Response
+- [[2026-03-02]] - Why Your Children Left Religion
 
 ---
 # 📃 Entries
