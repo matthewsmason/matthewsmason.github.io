@@ -7,7 +7,6 @@ title: Journal
 - [[Favorite Quotes]]
 - [[My Faith Crisis|My Faith Crisis (2025-02-07)]]
 
-
 ---
 # 📄 Pages
 *Updates from day to day.*

@@ -12,7 +12,7 @@ tags:
   - free-will
   - spiritual-deconstruction
 ---
-I’m having a faith crisis… and I want to talk about it. 
+*I’m having a faith crisis… and I want to talk about it.*
 ## A Curious Mind
 
 At an early age, I’ve always had a love of learning. My favorite books to read were encyclopedias that my parents would buy for me. I loved flipping through the pages, learning about how things worked and what science could explain about the world around me. But there was one subject that completely enraptured me. That subject was of course [[Dinosaurs|dinosaurs]].  At one point I could name every dinosaur, where they lived, when they lived, what they ate. My mind was filled with images of their world, fueled by documentaries like the *[[Walking With]]* series. Through my love of dinosaurs, I learned about many fields of science; [[Paleontology|paleontology]], [[Geology|geology]], [[Astronomy|astronomy]], and [[Biology|biology]] just to name a few. It was at this early age when I began questioning science against my faith.  
