@@ -30,8 +30,8 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 
 ### SteamDB
 
-| ![[steamdb-logo.png]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats. Makes for a better shopping and browsing experience than the store front on Steams desktop application.<br><br>Install [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb) |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![[steamdb-logo.png]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats.<br><br>Install [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb) |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Augmented Steam
 
@@ -39,8 +39,8 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ### ProtonDB for Steam
 
-| ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck and want to make sure a game is compatible!<br><br>Install [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb) |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck!<br><br>Install [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb) |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 # YouTube & Twitch
 
@@ -197,8 +197,8 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 ---
 ### SponsorBlock for YouTube - Skip Sponsorships
 
-| ![[sponsor-block.png]] | This extension fast forwards videos past annoying sponsorship segments. It's community driven, so if you're super early to a video it might not work. But once enough people report the sponsor segments with this extension it will mark that segment of the video in green and once the play head reaches that part of the video, it will automatically skip forward. Super nice!<br><br>Install [SponsorBlock for YouTube](https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone?utm_source=item-share-cb) and you're done! |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[sponsor-block.png]] | This extension fast forwards videos past annoying sponsorship segments. It's community driven, so once enough people report the sponsor segments, it will mark that segment of the video in green. When the play head reaches that part of the video, it will automatically skip forward!<br><br>Install [SponsorBlock for YouTube](https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone?utm_source=item-share-cb) and you're done! |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Return YouTube Dislike
 

@@ -91,34 +91,6 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
 		folderClickBehavior: "collapse",
-		sortFn: (a, b) => {
-		  if (!a.slugSegment || !b.slugSegment) return 0;
-
-		  const pinned = ["about", "journal"];
-		  const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
-		  const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
-
-		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-		  if (aIndex !== -1) return -1;
-		  if (bIndex !== -1) return 1;
-
-		  // Custom order for Notes subfolders
-		  const notesOrder: Record<string, number> = {
-			entries: 0,
-			pages: 1,
-			reflections: 2,
-		  };
-			const aIsNotesSub = a.slug.toLowerCase().startsWith("notes/");
-			const bIsNotesSub = b.slug.toLowerCase().startsWith("notes/");
-
-		  if (aIsNotesSub && bIsNotesSub) {
-			const aSubIndex = notesOrder[a.slugSegment.toLowerCase()] ?? 999;
-			const bSubIndex = notesOrder[b.slugSegment.toLowerCase()] ?? 999;
-			if (aSubIndex !== bSubIndex) return aSubIndex - bSubIndex;
-		  }
-
-		  return a.displayName.localeCompare(b.displayName);
-		},
 		filterFn: (node) => node.name !== "Assets",
 	}),
   ],
