@@ -181,6 +181,13 @@ pre {
   line-height: 1.6;
 }
 
+/* Table */
+table th {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
 /* Horizontal rule */
 hr {
   border: none;
