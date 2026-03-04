@@ -21,7 +21,6 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 | ![[remove-paywalls-logo.png]] | It's not often I'm browsing a page with a paywall, but when they do come up this handy little extension is able to remove them.<br><br>Install [Remove Paywalls](https://chromewebstore.google.com/detail/ghkdkllgoehcklnpajjjmfoaokabfdfm?utm_source=item-share-cb) |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
----
 # Shopping
 
 ### Keepa™ - Amazon Price Tracker
@@ -31,8 +30,8 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 
 ### SteamDB
 
-| ![[steamdb-logo.png\|100]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats. Makes for a better shopping and browsing experience than the store front on Steams desktop application.<br><br>Install [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb) |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![[steamdb-logo.png]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats. Makes for a better shopping and browsing experience than the store front on Steams desktop application.<br><br>Install [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb) |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ### Augmented Steam
 
@@ -43,7 +42,6 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 | ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck and want to make sure a game is compatible!<br><br>Install [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb) |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-----
 # YouTube & Twitch
 
 ### Enhancer for YouTube™
@@ -202,22 +200,24 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 | ![[sponsor-block.png]] | This extension fast forwards videos past annoying sponsorship segments. It's community driven, so if you're super early to a video it might not work. But once enough people report the sponsor segments with this extension it will mark that segment of the video in green and once the play head reaches that part of the video, it will automatically skip forward. Super nice!<br><br>Install [SponsorBlock for YouTube](https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone?utm_source=item-share-cb) and you're done! |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
----
 ### Return YouTube Dislike
 
 | ![[return-youtube-dislike.png]] | Why did YouTube get rid of the dislike button? I have no idea. But this extension brings it back! And that's it.<br><br>Install [Return YouTube Dislike](https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi?utm_source=item-share-cb) and that's it! |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
----
 ### BetterTTV
 
-| ![[betterttv.png\|80]] | This extension is a must if you watch Twitch, especially for the drops as this extension automatically claims channel points bonuses, drops, and moments! |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[betterttv.png]] | This extension is a must if you watch Twitch, especially for the drops as this extension automatically claims channel points bonuses, drops, and moments! |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 1. Install [BetterTTV](https://chromewebstore.google.com/detail/ajopnjidmegmdimjlfnijceegpefgped?utm_source=item-share-cb)
 2. To enable settings, navigate to [twitch.tv](https://www.twitch.tv/)
 3. Watch any streamer and click the gear icon right below the chat box on the bottom right.
 4. Click on "BetterTTV Settings" in the pop-up menu.
-   ![[betterttv-menu.png]]
-5. From there, you can enable settings like Auto Claim.![[betterttv-settings-panel.png|636]]
-6. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
-7. Enjoy!
+   
+   ![[betterttv-menu.png|316]]
+   
+1. From there, you can enable settings like Auto Claim.
+   ![[betterttv-settings-panel.png|636]]
+   
+2. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
+3. Enjoy!
