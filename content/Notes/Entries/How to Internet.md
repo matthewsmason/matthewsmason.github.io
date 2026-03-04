@@ -225,8 +225,9 @@ To quickly customize YouTube with my favorite settings, follow these steps:
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 1. Install [BetterTTV](https://chromewebstore.google.com/detail/ajopnjidmegmdimjlfnijceegpefgped?utm_source=item-share-cb)
 2. To enable settings, navigate to [twitch.tv](https://www.twitch.tv/)
-3. View any streamer and go down to the options pane of the chat.
-   ![[betterttv-settings.png|441]]
-4. From there, you can enable settings like Auto Claim.![[betterttv-settings-panel.png|636]]
-5. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
-6. Enjoy!
+3. Watch any streamer and click the gear icon right below the chat box on the bottom right.
+4. Click on "BetterTTV Settings" in the pop-up menu.
+   ![[betterttv-menu.png]]
+5. From there, you can enable settings like Auto Claim.![[betterttv-settings-panel.png|636]]
+6. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
+7. Enjoy!
