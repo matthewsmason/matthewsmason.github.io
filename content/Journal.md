@@ -1,11 +1,11 @@
 ---
 title: Journal
 ---
-# 📜 Reflections
-*Thoughts worth returning to.*
+# 📃 Entries
+*A little on a lot of things.*
 
-- [[Favorite Quotes]]
-- [[My Faith Crisis|My Faith Crisis (2025-02-07)]]
+- [[How to Internet]]
+- [[Cherry-Picked Scriptures]]
 
 ---
 # 📄 Pages
@@ -33,10 +33,8 @@ title: Journal
 - [[2026-03-02]] - Why Your Children Left Religion
 
 ---
-# 📃 Entries
-*A little on a lot of things.*
+# 📜 Reflections
+*Thoughts worth returning to.*
 
-- [[How to Internet]]
-- [[Cherry-Picked Scriptures]]
-
-
+- [[Favorite Quotes]]
+- [[My Faith Crisis|My Faith Crisis (2025-02-07)]]

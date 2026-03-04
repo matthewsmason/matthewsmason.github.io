@@ -104,9 +104,9 @@ export const defaultListPageLayout: PageLayout = {
 
 		  // Custom order for Notes subfolders
 		  const notesOrder: Record<string, number> = {
-			reflections: 0,
+			entries: 0,
 			pages: 1,
-			entries: 2,
+			reflections: 2,
 		  };
 			const aIsNotesSub = a.slug.toLowerCase().startsWith("notes/");
 			const bIsNotesSub = b.slug.toLowerCase().startsWith("notes/");
