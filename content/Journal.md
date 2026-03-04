@@ -36,6 +36,7 @@ title: Journal
 # 📃 Entries
 *A little on a lot of things.*
 
+- [[How to Internet]]
 - [[Cherry-Picked Scriptures]]
 
 
