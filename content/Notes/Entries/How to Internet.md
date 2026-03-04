@@ -12,12 +12,10 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 
 # Browsing & Ads
 
-## uBlock Origin Lite
-
-| ![[ublock-origin.png]] | This extension removes annoying ads. A must have for visiting most websites these days.                                          |
+| ![[ublock-origin.png]] | uBlock Origin Lite                                                                                                               |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+|                        | This extension removes annoying ads. A must have for visiting most websites these days.                                          |
 |                        | Install [uBlock Origin Lite](https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh?utm_source=item-share-cb) |
-
 ### Remove Paywalls
 
 | ![[remove-paywalls-logo.png]] | It's not often I'm browsing a page with a paywall, but when they do come up this handy little extension is able to remove them. |
@@ -57,7 +55,8 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 
 | ![[enhancer-for-youtube.png]] | YouTube does some annoying things with their UI sometimes. This extension allows you to customize YouTube with a ton of settings. |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-To quickly customize YouTube with my favorite settings, follow these steps:
+|                               | To quickly customize YouTube with my favorite settings, follow these steps:                                                       |
+
 1. Install [Enhancer for YouTube™](https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle?utm_source=item-share-cb)
 2. Navigate to your extensions page (usually a *puzzle* icon).
 3. Find Enhancer for YouTube™ in your list of installed extensions and click details.
