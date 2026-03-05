@@ -123,7 +123,7 @@ Am I to live my life in a lie? Am I to live my life believing in one way while s
 
 --- 
 
-[[Spiritual Deconstruction Resources| Resources and Works Cited]]
+[[Spiritual Deconstruction References| Resources and Works Cited]]
 
 I have written a series of update posts as I navigate my faith crisis and spiritual deconstruction from [[The Church of Jesus Christ of Latter-day Saints]] and [[Christianity]] as a whole. 
 

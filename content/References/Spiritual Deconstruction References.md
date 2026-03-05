@@ -32,6 +32,8 @@ These are just a few of the resources I’ve watched, listened to, or read that 
 
 [@MindShift | Brandon](https://www.youtube.com/@MindShift-Brandon)
 
+[@nononsensespirituality](https://www.youtube.com/@nononsensespirituality)
+
 [@ProfessorDaveExplains](https://www.youtube.com/@ProfessorDaveExplains)
 
 [@Skeptical Heretic](https://youtube.com/@skeptical_heretic?si=2c-l8MN8q32N0GBg)
@@ -40,6 +42,7 @@ These are just a few of the resources I’ve watched, listened to, or read that 
 
 [@NEMOTHEMORMON](https://www.youtube.com/channel/UCo-6l1g27GdDb4riutS8I0w)
 
+[@maklelan](https://www.youtube.com/@maklelan)
 
 # Works Cited 
 

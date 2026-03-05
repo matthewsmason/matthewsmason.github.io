@@ -19,7 +19,7 @@ Most cherry-pick good scripture verses to share and wave around as support for a
 **Exodus 22:28-30**
 > Thou shalt not revile the gods, nor curse the ruler of thy people.
 > Thou shalt not delay to offer the first of thy ripe fruits, and of thy liquors: the firstborn of thy sons shalt thou give unto me.
-> Likewise shalt thou do with thine oxen, and with thy sheep: seven days it shall be with his dam; on the eighth day thou shalt give it me
+> Likewise shalt thou do with thine oxen, and with thy sheep: seven days it shall be with his dam; on the eighth day thou shalt give it me.
 
 **Deuteronomy 21:18-21**
 > And they shall say unto the elders of his city, This our son is stubborn and rebellious, he will not obey our voice; he is a glutton, and a drunkard.
@@ -72,7 +72,7 @@ Most cherry-pick good scripture verses to share and wave around as support for a
 
 **Genesis 29** - Jacob marries Leah and Rachel.
 
-**D&C 132:54** 
+**D&C 132:54**
 > And I command mine handmaid, Emma Smith, to abide and cleave unto my servant Joseph, and to none else. But if she will not abide this commandment she shall be destroyed⁠, saith the Lord; for I am the Lord thy God, and will destroy her if she abide not in my law.
 
 ## Slavery
@@ -108,9 +108,6 @@ Most cherry-pick good scripture verses to share and wave around as support for a
 
 **Genesis 19:8**
 > Behold now, I have two daughters which have not known man; let me, I pray you, bring them out unto you, and do ye to them as is good in your eyes: only unto these men do nothing; for therefore came they under the shadow of my roof.
-
-**1 Timothy 2:11-12**
-> Let the woman learn in silence with all subjection. But I suffer not a woman to teach⁠, nor to usurp authority over the man, but to be in silence⁠.
 
 **Deuteronomy 22:29**
 > Then the man that lay with her shall give unto the damsel’s father fifty shekels of silver, and she shall be his wife⁠; because he hath humbled her, he may not put her away all his days.

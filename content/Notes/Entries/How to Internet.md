@@ -42,7 +42,7 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 | ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck!<br><br>Install [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb) |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-# YouTube & Twitch
+# [[YouTube]] & Twitch
 
 ### Enhancer for YouTube™
 
