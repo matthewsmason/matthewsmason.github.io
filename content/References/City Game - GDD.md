@@ -57,7 +57,7 @@ Maps are procedurally generated so no two games are identical. The generator is 
 
 Resources are organized into tiers. Higher tiers are manufactured from lower tiers and require increasing infrastructure investment to produce and transport.
 
-[[city-game-resource-tier-tree.html|See an example of a resource tree here.]]
+[[./Assets/Attachments/HTML/city-game-resource-tier-tree.html|See an example of a resource tree here.]]
 
 > **Land** is an implicit Tier 0 resource — never listed but always consumed. As the city expands, land available for extraction and manufacturing shrinks, creating natural pressure on expansion decisions.
 
