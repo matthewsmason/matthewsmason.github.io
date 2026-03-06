@@ -50,4 +50,4 @@ Resources -> Extractor -> Factory -> Business -> Home
 * Cars - Transports citizens.
 * Semi's - Transports resources or products.
   
-For more details, checkout my [[City Game - GDD|Game Design Doc]]. 
+For more details, checkout my [[City Game — Game Design Document|Game Design Doc]]. 

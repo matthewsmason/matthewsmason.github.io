@@ -1,8 +1,3 @@
----
-aliases:
-  - Game Design Doc
----
-# City Game — Game Design Document
 *v0.1 · Draft*
 
 ---
