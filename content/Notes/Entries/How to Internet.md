@@ -1,10 +1,11 @@
 ---
+title: How to Internet
 created: 2026-03-03
 tags:
   - youtube
   - technology
   - steam
-description:
+description: A list of browser extensions I use daily.
 ---
 # Overview
 

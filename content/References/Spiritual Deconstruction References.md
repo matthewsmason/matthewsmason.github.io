@@ -9,7 +9,7 @@ tags:
   - prophet
   - youtube
 ---
-These are just a few of the resources I’ve watched, listened to, or read that has helped me on my journey through [[My Faith Crisis]].
+These are just a few of the resources I’ve watched, listened to, or read that has helped me on my journey through [[2025-02-07|My Faith Crisis]].
 ### YouTube
 
 [@aDoseofReason](https://youtube.com/@adoseofreason)
@@ -46,7 +46,7 @@ These are just a few of the resources I’ve watched, listened to, or read that 
 
 # Works Cited 
 
-#### All references I used in my original note: [[My Faith Crisis]].
+#### All references I used in my original note: [[2025-02-07]].
 
 Bloomberg Television. “Trump: Is There a Way We Can Do Something With Disinfectant?” _YouTube_, 23 Apr. 2020, [https://www.youtube.com/watch?v=N0eDaYt413g](https://www.youtube.com/watch?v=N0eDaYt413g). Accessed 18 Apr. 2025.
 

@@ -3,4 +3,4 @@ The snarky nature of the first CES Letter put me off when I was a younger, belie
 **HTML:** https://read.cesletter.org/
 
 **PDF:**
-![[CES-Letter.pdf]]
+![[CES-Letter.pdf]] 

@@ -1,16 +1,10 @@
 ---
 title: Journal
 ---
-# 📃 Entries
-*A little on a lot of things.*
+# 📜 Reflections
+_Thoughts worth returning to._
 
-- [[How to Internet]]
-- [[Cherry-Picked Scriptures]]
-
----
-# 📄 Pages
-*Updates from day to day.*
-
+- [[2025-02-07]] - My Faith Crisis (The Beginning)
 - [[2025-04-09]] - CES Letter vs Light & Truth Letter
 - [[2025-04-15]] - Personal Update #1
 - [[2025-04-22]] - Rhett's Spiritual Deconstruction
@@ -22,6 +16,7 @@ title: Journal
 - [[2025-07-05]] - Thoughts on Morality
 - [[2025-07-07]] - Personal Update #3
 - [[2025-08-03]] - Mark Hoffman & the Church
+- [[2025-09-30]] - Cherry-Picked Scriptures
 - [[2025-10-07]] - An Inconvenient Faith
 - [[2025-12-14]] - Acceptance of Evolution
 - [[2026-01-06]] - The Origin of Man
@@ -33,8 +28,8 @@ title: Journal
 - [[2026-03-02]] - Why Your Children Left Religion
 
 ---
-# 📜 Reflections
-*Thoughts worth returning to.*
+# 📃Entries
+_A little on a lot of things._
 
+- [[How to Internet]]
 - [[Favorite Quotes]]
-- [[My Faith Crisis|My Faith Crisis (2025-02-07)]]
