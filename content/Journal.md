@@ -1,6 +1,14 @@
 ---
 title: Journal
 ---
+# 📃Entries
+_A little on a lot of things._
+
+- [[How to Internet]]
+- [[Favorite Quotes]]
+- [[My Dream City Game]]
+
+---
 # 📜 Reflections
 _Thoughts worth returning to._
 
@@ -28,9 +36,3 @@ _Thoughts worth returning to._
 - [[2026-03-02]] - Why Your Children Left Religion
 
 ---
-# 📃Entries
-_A little on a lot of things._
-
-- [[How to Internet]]
-- [[Favorite Quotes]]
-- [[My Dream City Game]]
