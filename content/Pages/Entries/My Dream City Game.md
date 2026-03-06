@@ -27,6 +27,8 @@ Resources -> Extractor -> Factory -> Business -> Home
 - `Stone`, `Sand`, `Ore`, `Oil`, `Wood`, `Water`.
 - Lower tiered resources build into higher tiered resources.
 - `Water` and `Energy` resources need to be piped.
+
+>[!example] See a quick Claude mock-up of a resource tree [here!](https://claude.ai/public/artifacts/632e38d4-d43c-430f-a07d-7881eef22c33)
 ### Extractors
 * Cheap to build.
 * Specialized buildings that can extract specific resources from the map.
