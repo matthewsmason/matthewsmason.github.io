@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resource Combination Tree</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600;700&display=swap');
+
+  :root {
+    --bg:   #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --t0:  #58a6ff;
+    --t1:  #3fb950;
+    --t2:  #c9a227;
+    --t3:  #f78166;
+    --t4:  #bc8cff;
+    --t5:  #ff6eb4;
+    --t6:  #00e5ff;
+    --t7:  #ffe066;
+    --t8:  #ff9f43;
+    --t9:  #7bed9f;
+    --t10: #e0e0e0;
+    --te:  #ffa657;
+    --text: #e6edf3;
+    --muted: #8b949e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 18px 28px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    position: sticky; top: 0;
+    background: var(--bg);
+    z-index: 50;
+  }
+
+  header h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  header p { font-size: 12px; color: var(--muted); }
+
+  .legend {
+    display: flex;
+    gap: 14px;
+    padding: 9px 28px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    position: sticky; top: 49px;
+    background: var(--bg);
+    z-index: 50;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'Share Tech Mono', monospace;
+    white-space: nowrap;
+  }
+
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  .tree-wrap { position: relative; }
+
+  #line-canvas {
+    position: absolute; top: 0; left: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tier-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 2;
+  }
+
+  .tier-label {
+    width: 90px;
+    flex-shrink: 0;
+    padding-top: 8px;
+  }
+
+  .tier-label .tier-name {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .tier-label .tier-sub {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+
+  .nodes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .node:hover { transform: translateY(-2px); }
+
+  .node-card {
+    padding: 5px 11px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    transition: box-shadow 0.2s ease, opacity 0.2s ease;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .node.dimmed .node-card   { opacity: 0.1; }
+  .node.dimmed .node-recipe { opacity: 0.07; }
+  .node.highlighted .node-card { box-shadow: 0 0 12px currentColor; }
+
+  .node-recipe {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
+    max-width: 135px;
+    line-height: 1.35;
+    transition: opacity 0.2s;
+  }
+
+  .t0  .node-card { color: var(--t0);  border-color: var(--t0);  background: rgba(88,166,255,0.07); }
+  .t1  .node-card { color: var(--t1);  border-color: var(--t1);  background: rgba(63,185,80,0.07); }
+  .t2  .node-card { color: var(--t2);  border-color: var(--t2);  background: rgba(201,162,39,0.07); }
+  .t3  .node-card { color: var(--t3);  border-color: var(--t3);  background: rgba(247,129,102,0.07); }
+  .t4  .node-card { color: var(--t4);  border-color: var(--t4);  background: rgba(188,140,255,0.07); }
+  .t5  .node-card { color: var(--t5);  border-color: var(--t5);  background: rgba(255,110,180,0.07); }
+  .t6  .node-card { color: var(--t6);  border-color: var(--t6);  background: rgba(0,229,255,0.07); }
+  .t7  .node-card { color: var(--t7);  border-color: var(--t7);  background: rgba(255,224,102,0.07); }
+  .t8  .node-card { color: var(--t8);  border-color: var(--t8);  background: rgba(255,159,67,0.07); }
+  .t9  .node-card { color: var(--t9);  border-color: var(--t9);  background: rgba(123,237,159,0.07); }
+  .t10 .node-card { color: var(--t10); border-color: var(--t10); background: rgba(224,224,224,0.07); }
+  .te  .node-card { color: var(--te);  border-color: var(--te);  background: rgba(255,166,87,0.1); }
+
+  .tier-label.t0  .tier-name { color: var(--t0); }
+  .tier-label.t1  .tier-name { color: var(--t1); }
+  .tier-label.t2  .tier-name { color: var(--t2); }
+  .tier-label.t3  .tier-name { color: var(--t3); }
+  .tier-label.t4  .tier-name { color: var(--t4); }
+  .tier-label.t5  .tier-name { color: var(--t5); }
+  .tier-label.t6  .tier-name { color: var(--t6); }
+  .tier-label.t7  .tier-name { color: var(--t7); }
+  .tier-label.t8  .tier-name { color: var(--t8); }
+  .tier-label.t9  .tier-name { color: var(--t9); }
+  .tier-label.t10 .tier-name { color: var(--t10); }
+  .tier-label.te  .tier-name { color: var(--te); }
+
+  .tooltip {
+    position: fixed;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 12px;
+    max-width: 290px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 200;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.55);
+  }
+
+  .tooltip.visible { opacity: 1; }
+  .tooltip-name   { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .tooltip-recipe { color: var(--muted); font-family: 'Share Tech Mono', monospace; font-size: 10px; margin-bottom: 7px; line-height: 1.5; }
+  .tooltip-uses   { font-size: 11px; color: var(--text); line-height: 1.7; }
+  .tooltip-uses span { color: var(--muted); display: block; margin-bottom: 2px; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Combination Tree</h1>
+  <p>Products &amp; materials only — hover any node to trace connections</p>
+</header>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t0)"></div>Tier 0 — World</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--te)"></div>Energy</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t1)"></div>T1 Basic</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t2)"></div>T2 Industrial</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t3)"></div>T3 Refined</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t4)"></div>T4 Processed</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t5)"></div>T5 Components</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t6)"></div>T6 Advanced</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t7)"></div>T7 Precision</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t8)"></div>T8 High-Tech</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t9)"></div>T9 Cutting Edge</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--t10)"></div>T10 Pinnacle</div>
+</div>
+
+<div class="tree-wrap" id="tree-wrap">
+  <canvas id="line-canvas"></canvas>
+  <div id="tree"></div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const TC = {
+  t0:'#58a6ff', te:'#ffa657', t1:'#3fb950', t2:'#c9a227', t3:'#f78166',
+  t4:'#bc8cff', t5:'#ff6eb4', t6:'#00e5ff', t7:'#ffe066',
+  t8:'#ff9f43', t9:'#7bed9f', t10:'#e0e0e0'
+};
+
+const nodes = [
+
+  // ── TIER 0 — WORLD RESOURCES ─────────────────────────────────────────────
+  { id:'metal_ore',  tier:'t0', name:'Metal Ore',           recipe:'Iron, copper, aluminum deposits',      uses:['Metal','Aluminum','Copper Wire'],                                 inputs:[] },
+  { id:'rare_ore',   tier:'t0', name:'Rare Ore',            recipe:'Deep / remote deposits',               uses:['Rare Metals','Lithium','Gold','Uranium Fuel'],                    inputs:[] },
+  { id:'coal',       tier:'t0', name:'Coal',                recipe:'Shallow coal seams',                   uses:['Steel (coke)','Charcoal','Energy source'],                        inputs:[] },
+  { id:'sand',       tier:'t0', name:'Sand',                recipe:'Coastal / desert / riverbed',          uses:['Glass','Concrete','Silicon','Cement'],                            inputs:[] },
+  { id:'stone',      tier:'t0', name:'Stone',               recipe:'Rocky terrain, quarry sites',          uses:['Concrete','Gravel','Brick','Limestone'],                          inputs:[] },
+  { id:'oil',        tier:'t0', name:'Oil',                 recipe:'Underground / offshore deposits',      uses:['Plastic','Chemicals','Natural Gas','Energy source'],              inputs:[] },
+  { id:'wood',       tier:'t0', name:'Wood',                recipe:'Forest tiles',                         uses:['Lumber','Paper','Charcoal','Energy source'],                      inputs:[] },
+  { id:'water',      tier:'t0', name:'Water',               recipe:'Rivers, lakes, aquifers',              uses:['Concrete','Crops','Purified Water','All factories'],              inputs:[] },
+
+  // ── ENERGY — single node, source is the player's choice ─────────────────
+  { id:'energy',     tier:'te', name:'Energy',              recipe:'Coal / Oil / Gas / Hydro / Solar / Wind / Nuclear — player choice', uses:['Required by every factory'], inputs:['coal','oil','wood','water'] },
+
+  // ── TIER 1 — BASIC PROCESSED ─────────────────────────────────────────────
+  { id:'metal',      tier:'t1', name:'Metal',               recipe:'Metal Ore + Energy',                   uses:['Steel','Aluminum','Copper Wire','Pipes','Tools'],                 inputs:['metal_ore','energy'] },
+  { id:'lumber',     tier:'t1', name:'Lumber',              recipe:'Wood + Energy',                        uses:['Furniture','Building Frame','Drywall'],                           inputs:['wood','energy'] },
+  { id:'concrete',   tier:'t1', name:'Concrete',            recipe:'Stone + Sand + Water',                 uses:['Roads','Foundations','Reinforced Concrete'],                      inputs:['stone','sand','water'] },
+  { id:'glass',      tier:'t1', name:'Glass',               recipe:'Sand + Energy',                        uses:['Windows','Tempered Glass','Fiberglass'],                          inputs:['sand','energy'] },
+  { id:'gravel',     tier:'t1', name:'Gravel',              recipe:'Stone + Energy',                       uses:['Road base','Asphalt','Drainage'],                                 inputs:['stone','energy'] },
+  { id:'charcoal',   tier:'t1', name:'Charcoal',            recipe:'Wood + Energy (kiln)',                 uses:['Early smelting','Activated Carbon'],                              inputs:['wood','energy'] },
+  { id:'crops',      tier:'t1', name:'Crops',               recipe:'Land + Water',                         uses:['Basic Food','Textiles','Ethanol'],                                inputs:['water'] },
+  { id:'basic_food', tier:'t1', name:'Basic Food',          recipe:'Crops + Energy',                       uses:['Citizen survival','Processed Food'],                              inputs:['crops','energy'] },
+  { id:'paper',      tier:'t1', name:'Paper',               recipe:'Wood + Water + Energy',                uses:['Packaging','Drywall','Textbook'],                                 inputs:['wood','water','energy'] },
+  { id:'limestone',  tier:'t1', name:'Limestone',           recipe:'Stone + Water',                        uses:['Cement','Fertilizer','Drywall'],                                  inputs:['stone','water'] },
+
+  // ── TIER 2 — INDUSTRIAL MATERIALS ────────────────────────────────────────
+  { id:'steel',      tier:'t2', name:'Steel',               recipe:'Metal + Coal (coke) + Energy',         uses:['Machinery','Vehicles','R.Concrete','Wire','Structural Frame'],    inputs:['metal','coal','energy'] },
+  { id:'aluminum',   tier:'t2', name:'Aluminum',            recipe:'Metal Ore + Energy (high)',            uses:['Structural Frame','Insulated Panel','Magnets','Cable'],           inputs:['metal_ore','energy'] },
+  { id:'copper_wire',tier:'t2', name:'Copper Wire',         recipe:'Metal (copper) + Energy',              uses:['Electrical systems','Electronics','Motors','Transformer'],        inputs:['metal','energy'] },
+  { id:'plastic',    tier:'t2', name:'Plastic',             recipe:'Oil + Energy',                         uses:['Packaging','Pipes','Electronics housing','Insulation'],           inputs:['oil','energy'] },
+  { id:'chemicals',  tier:'t2', name:'Chemicals',           recipe:'Oil + Water + Energy',                 uses:['Fertilizer','Medicine','Rubber','Purified Water'],                inputs:['oil','water','energy'] },
+  { id:'cement',     tier:'t2', name:'Cement',              recipe:'Limestone + Sand + Energy',            uses:['Advanced concrete mix','Mortar'],                                 inputs:['limestone','sand','energy'] },
+  { id:'asphalt',    tier:'t2', name:'Asphalt',             recipe:'Oil + Gravel',                         uses:['Paved Roads','Roofing material'],                                 inputs:['oil','gravel'] },
+  { id:'brick',      tier:'t2', name:'Brick',               recipe:'Stone + Water + Energy',               uses:['Residential buildings','Industrial walls'],                       inputs:['stone','water','energy'] },
+  { id:'tools',      tier:'t2', name:'Tools',               recipe:'Metal + Wood',                         uses:['Extractor efficiency','Machinery','Construction speed'],          inputs:['metal','wood'] },
+  { id:'pipes',      tier:'t2', name:'Pipes',               recipe:'Metal + Energy',                       uses:['Water network','Oil network','Gas network'],                      inputs:['metal','energy'] },
+  { id:'fertilizer', tier:'t2', name:'Fertilizer',          recipe:'Chemicals + Limestone + Water',        uses:['Crop yield modifier'],                                            inputs:['chemicals','limestone','water'] },
+  { id:'furniture',  tier:'t2', name:'Furniture',           recipe:'Lumber + Metal',                       uses:['Home quality','Offices','Schools'],                               inputs:['lumber','metal'] },
+  { id:'textiles',   tier:'t2', name:'Textiles',            recipe:'Crops + Energy',                       uses:['Clothing','Medical supplies','Upholstery'],                       inputs:['crops','energy'] },
+  { id:'nat_gas',    tier:'t2', name:'Natural Gas',         recipe:'Oil + Energy (refine)',                uses:['Cleaner energy source','Heating','Hydrogen'],                     inputs:['oil','energy'] },
+  { id:'rubber',     tier:'t2', name:'Rubber',              recipe:'Oil + Chemicals',                      uses:['Tires','Wire insulation','Seals'],                                inputs:['oil','chemicals'] },
+  { id:'glass_adv',  tier:'t2', name:'Tempered Glass',      recipe:'Glass + Energy (high temp)',           uses:['High-rise windows','Optics','Solar Panel'],                       inputs:['glass','energy'] },
+  { id:'proc_food',  tier:'t2', name:'Processed Food',      recipe:'Basic Food + Plastic + Energy',        uses:['Citizen happiness','Cuisine','Export good'],                      inputs:['basic_food','plastic','energy'] },
+  { id:'drywall',    tier:'t2', name:'Drywall',             recipe:'Limestone + Paper + Energy',           uses:['Interior wall material','Mid-tier housing'],                      inputs:['limestone','paper','energy'] },
+
+  // ── TIER 3 — REFINED MATERIALS ───────────────────────────────────────────
+  { id:'r_concrete', tier:'t3', name:'Reinforced Concrete', recipe:'Concrete + Steel',                    uses:['High-rise','Bridges','Tunnels','Large infrastructure'],            inputs:['concrete','steel'] },
+  { id:'tires',      tier:'t3', name:'Tires',               recipe:'Rubber + Steel + Energy',              uses:['Vehicles','Heavy equipment'],                                     inputs:['rubber','steel','energy'] },
+  { id:'wire',       tier:'t3', name:'Wire / Cable',        recipe:'Copper Wire + Rubber',                 uses:['Power grid','Electronics','Motors'],                              inputs:['copper_wire','rubber'] },
+  { id:'insulation', tier:'t3', name:'Insulation',          recipe:'Plastic + Rubber + Energy',            uses:['Insulated Panel','Building efficiency','Cold Chain'],             inputs:['plastic','rubber','energy'] },
+  { id:'medicine',   tier:'t3', name:'Medicine',            recipe:'Chemicals + Textiles + Water',         uses:['Hospitals','Pharmaceuticals','Medical Devices'],                  inputs:['chemicals','textiles','water'] },
+  { id:'packaging',  tier:'t3', name:'Packaging',           recipe:'Paper + Plastic',                      uses:['Processed Food','Export goods','Cold Chain'],                     inputs:['paper','plastic'] },
+  { id:'lubricant',  tier:'t3', name:'Lubricant',           recipe:'Oil + Chemicals',                      uses:['Machinery efficiency','Vehicle maintenance'],                     inputs:['oil','chemicals'] },
+  { id:'ethanol',    tier:'t3', name:'Ethanol',             recipe:'Crops + Water + Energy',               uses:['Biofuel','Pharmaceuticals','Cleaning agent'],                     inputs:['crops','water','energy'] },
+  { id:'glass_fiber',tier:'t3', name:'Fiberglass',          recipe:'Tempered Glass + Plastic',             uses:['Composite','Fiber Optic Cable','Insulation board'],              inputs:['glass_adv','plastic'] },
+  { id:'composite',  tier:'t3', name:'Composite',           recipe:'Fiberglass + Plastic + Aluminum',      uses:['Structural Frame','Wind turbine blades','Lightweight vehicles'], inputs:['glass_fiber','plastic','aluminum'] },
+  { id:'insul_panel',tier:'t3', name:'Insulated Panel',     recipe:'Insulation + Aluminum + Steel',        uses:['Energy-efficient buildings','Cold Chain walls'],                  inputs:['insulation','aluminum','steel'] },
+  { id:'cuisine',    tier:'t3', name:'Cuisine',             recipe:'Processed Food + Furniture + Energy',  uses:['Restaurants','Tourism boost','High happiness'],                   inputs:['proc_food','furniture','energy'] },
+  { id:'roofing',    tier:'t3', name:'Roofing',             recipe:'Rubber + Aluminum + Asphalt',          uses:['Permanent housing','Industrial roofing'],                         inputs:['rubber','aluminum','asphalt'] },
+  { id:'struct_frame',tier:'t3',name:'Structural Frame',    recipe:'Steel + Aluminum + Composite',         uses:['High-rise buildings','Large industrial buildings'],               inputs:['steel','aluminum','composite'] },
+  { id:'activated_carbon',tier:'t3',name:'Activated Carbon',recipe:'Charcoal + Steam + Energy',            uses:['Water filtration','Air filtration','Purified Water'],             inputs:['charcoal','water','energy'] },
+
+  // ── TIER 4 — PROCESSED GOODS ─────────────────────────────────────────────
+  { id:'gasoline',   tier:'t4', name:'Gasoline',            recipe:'Oil + Machinery (refinery)',           uses:['Passenger vehicles','Small generators'],                          inputs:['oil','machinery'] },
+  { id:'diesel',     tier:'t4', name:'Diesel',              recipe:'Oil + Machinery (refinery)',           uses:['Heavy freight semis','Construction equipment'],                   inputs:['oil','machinery'] },
+  { id:'petrochem',  tier:'t4', name:'Petrochemicals',      recipe:'Oil + Machinery + Energy',             uses:['Synthetic Rubber','Advanced Plastics','Resins'],                  inputs:['oil','machinery','energy'] },
+  { id:'purified_water',tier:'t4',name:'Purified Water',    recipe:'Water + Activated Carbon + Chemicals', uses:['Pharmaceuticals','Food processing','Electronics fab'],            inputs:['water','activated_carbon','chemicals'] },
+  { id:'silicon',    tier:'t4', name:'Silicon',             recipe:'Sand + Energy (high temp)',            uses:['Microchip','Solar Panel','Precision optics'],                     inputs:['sand','energy'] },
+  { id:'rare_metals',tier:'t4', name:'Rare Metals',         recipe:'Rare Ore + Chemicals + Energy',        uses:['Magnets','Catalysts','Battery cells','Electronics'],              inputs:['rare_ore','chemicals','energy'] },
+  { id:'lithium',    tier:'t4', name:'Lithium',             recipe:'Rare Ore + Water + Energy',            uses:['Battery Pack','Pharmaceuticals','Ceramics'],                      inputs:['rare_ore','water','energy'] },
+  { id:'gold',       tier:'t4', name:'Gold',                recipe:'Rare Ore + Chemicals',                 uses:['Electronics contacts','Precision instruments'],                   inputs:['rare_ore','chemicals'] },
+  { id:'pharma',     tier:'t4', name:'Pharmaceuticals',     recipe:'Medicine + Chemicals + Ethanol',       uses:['Advanced hospitals','Disease control','Population growth'],       inputs:['medicine','chemicals','ethanol'] },
+  { id:'machinery',  tier:'t4', name:'Machinery',           recipe:'Steel + Tools + Energy',               uses:['Factory efficiency','Refinery','Mining rigs'],                   inputs:['steel','tools','energy'] },
+  { id:'magnets',    tier:'t4', name:'Rare Earth Magnets',  recipe:'Rare Metals + Aluminum + Energy',      uses:['Electric Motors','Wind turbines','MRI machines'],                inputs:['rare_metals','aluminum','energy'] },
+  { id:'syn_rubber', tier:'t4', name:'Synthetic Rubber',    recipe:'Petrochemicals + Energy',              uses:['Superior Tires','High-temp seals','Hi-perf composites'],          inputs:['petrochem','energy'] },
+  { id:'uranium_fuel',tier:'t4',name:'Uranium Fuel',        recipe:'Rare Ore + Chemicals + Energy',        uses:['Nuclear Power — fuel input'],                                    inputs:['rare_ore','chemicals','energy'] },
+
+  // ── TIER 5 — COMPONENTS ───────────────────────────────────────────────────
+  { id:'motor',      tier:'t5', name:'Electric Motor',      recipe:'Copper Wire + Steel + Magnets',        uses:['Electric Vehicles','Elevators','Pumps','Industrial machinery'],  inputs:['copper_wire','steel','magnets'] },
+  { id:'solar_panel',tier:'t5', name:'Solar Panel',         recipe:'Tempered Glass + Silicon + Wire',      uses:['Solar Power arrays'],                                            inputs:['glass_adv','silicon','wire'] },
+  { id:'optics',     tier:'t5', name:'Precision Optics',    recipe:'Tempered Glass + Silicon + Energy',    uses:['Medical imaging','Cameras','Fiber Optic','Laser equipment'],    inputs:['glass_adv','silicon','energy'] },
+  { id:'fiber_optic',tier:'t5', name:'Fiber Optic Cable',   recipe:'Fiberglass + Rare Metals + Plastic',   uses:['Telecom network','Smart city backbone','High-speed data'],      inputs:['glass_fiber','rare_metals','plastic'] },
+  { id:'tires_adv',  tier:'t5', name:'High-Perf. Tires',    recipe:'Synthetic Rubber + Steel + Energy',    uses:['High-speed vehicles','Heavy industrial equipment'],              inputs:['syn_rubber','steel','energy'] },
+  { id:'ceramics',   tier:'t5', name:'Advanced Ceramics',   recipe:'Lithium + Sand + Energy (high temp)',  uses:['Heat shields','Cutting tools','Medical implants','Insulators'],  inputs:['lithium','sand','energy'] },
+  { id:'resins',     tier:'t5', name:'Resins',              recipe:'Petrochemicals + Chemicals',           uses:['Adv. Composite','Coatings','Adhesives','Circuit boards'],        inputs:['petrochem','chemicals'] },
+  { id:'cold_chain', tier:'t5', name:'Cold Chain',          recipe:'Insulated Panel + Machinery + Energy', uses:['Pharmaceutical transport','Food preservation network'],          inputs:['insul_panel','machinery','energy'] },
+  { id:'textbook',   tier:'t5', name:'Textbook',            recipe:'Paper + Computer',                     uses:['Education building efficiency boost'],                           inputs:['paper','computer'] },
+
+  // ── TIER 6 — ADVANCED MATERIALS ──────────────────────────────────────────
+  { id:'microchip',  tier:'t6', name:'Microchip',           recipe:'Silicon + Gold + Rare Metals + Energy',uses:['Computers','Medical devices','Smart sensors','Control systems'], inputs:['silicon','gold','rare_metals','energy'] },
+  { id:'battery',    tier:'t6', name:'Battery Pack',        recipe:'Lithium + Rare Metals + Plastic + Energy', uses:['Electric Vehicles','Grid storage','Portable power'],        inputs:['lithium','rare_metals','plastic','energy'] },
+  { id:'adv_composite',tier:'t6',name:'Adv. Composite',     recipe:'Composite + Resins + Ceramics',        uses:['Aerospace structures','High-temp industrial parts'],             inputs:['composite','resins','ceramics'] },
+  { id:'carbon_fiber',tier:'t6',name:'Carbon Fiber',        recipe:'Petrochemicals + Energy (extreme)',     uses:['Ultra-light structures','High-strength cables'],                inputs:['petrochem','energy'] },
+  { id:'alloy',      tier:'t6', name:'Advanced Alloy',      recipe:'Steel + Rare Metals + Energy',         uses:['Precision machinery','Aerospace parts','Medical instruments'],   inputs:['steel','rare_metals','energy'] },
+  { id:'transformer',tier:'t6', name:'Transformer',         recipe:'Copper Wire + Steel + Wire + Insulation', uses:['Power grid voltage regulation','Substation component'],      inputs:['copper_wire','steel','wire','insulation'] },
+
+  // ── TIER 7 — PRECISION GOODS ──────────────────────────────────────────────
+  { id:'computer',   tier:'t7', name:'Computer',            recipe:'Microchip + Electronics + Wire',       uses:['Automation systems','Smart Grid control','Textbook'],            inputs:['microchip','electronics','wire'] },
+  { id:'electronics',tier:'t7', name:'Electronics',         recipe:'Microchip + Copper Wire + Plastic',    uses:['Computers','Appliances','Vehicle systems','Control boards'],     inputs:['microchip','copper_wire','plastic'] },
+  { id:'display',    tier:'t7', name:'Display Screen',      recipe:'Silicon + Rare Metals + Tempered Glass',uses:['Computers','Control panels','Smart signage'],                  inputs:['silicon','rare_metals','glass_adv'] },
+  { id:'sensors',    tier:'t7', name:'Sensors',             recipe:'Electronics + Precision Optics + Fiber Optic', uses:['Smart traffic','Air quality','Factory automation'],     inputs:['electronics','optics','fiber_optic'] },
+  { id:'servo',      tier:'t7', name:'Servo / Actuator',    recipe:'Electric Motor + Electronics + Magnets',uses:['Robotics','CNC machines','Precision manufacturing'],           inputs:['motor','electronics','magnets'] },
+  { id:'med_device', tier:'t7', name:'Medical Device',      recipe:'Electronics + Precision Optics + Pharma', uses:['Advanced hospitals','Diagnostics','Surgical precision'],     inputs:['electronics','optics','pharma'] },
+  { id:'solar_cell', tier:'t7', name:'High-Eff. Solar Cell',recipe:'Silicon + Gold + Rare Metals + Energy',uses:['Advanced Solar arrays','Building-integrated solar'],            inputs:['silicon','gold','rare_metals','energy'] },
+  { id:'hydrogen',   tier:'t7', name:'Hydrogen',            recipe:'Purified Water + Energy (electrolysis)',uses:['Hydrogen fuel cell','Clean fuel','Industrial reducing agent'],  inputs:['purified_water','energy'] },
+
+  // ── TIER 8 — HIGH-TECH GOODS ──────────────────────────────────────────────
+  { id:'robot',      tier:'t8', name:'Industrial Robot',    recipe:'Servo + Electronics + Adv. Alloy',     uses:['Factory automation','Hazardous material handling'],              inputs:['servo','electronics','alloy'] },
+  { id:'ev',         tier:'t8', name:'Electric Vehicle',    recipe:'Motor + Battery Pack + Electronics + Hi-Perf. Tires', uses:['Clean city transit','Freight electrification'],  inputs:['motor','battery','electronics','tires_adv'] },
+  { id:'fuel_cell',  tier:'t8', name:'Fuel Cell',           recipe:'Hydrogen + Rare Metals + Ceramics',    uses:['Zero-emission power source','EV range extender'],                inputs:['hydrogen','rare_metals','ceramics'] },
+  { id:'smart_meter',tier:'t8', name:'Smart Meter',         recipe:'Electronics + Sensors + Fiber Optic',  uses:['Grid monitoring','Demand forecasting','Usage billing'],         inputs:['electronics','sensors','fiber_optic'] },
+  { id:'carbon_nanotube',tier:'t8',name:'Carbon Nanotube',  recipe:'Carbon Fiber + Energy (extreme)',       uses:['Superconductor','Ultra-strong cables','Next-gen electronics'],  inputs:['carbon_fiber','energy'] },
+  { id:'adv_pharma', tier:'t8', name:'Advanced Pharma',     recipe:'Pharmaceuticals + Medical Device + Purified Water', uses:['Disease elimination','Lifespan extension'],        inputs:['pharma','med_device','purified_water'] },
+  { id:'solid_battery',tier:'t8',name:'Solid-State Battery',recipe:'Battery Pack + Ceramics + Rare Metals', uses:['Next-gen EVs','High-density grid storage'],                    inputs:['battery','ceramics','rare_metals'] },
+
+  // ── TIER 9 — CUTTING EDGE ─────────────────────────────────────────────────
+  { id:'superconductor',tier:'t9',name:'Superconductor',    recipe:'Carbon Nanotube + Rare Metals + Energy',uses:['Lossless power cable','Maglev rail','MRI machines'],            inputs:['carbon_nanotube','rare_metals','energy'] },
+  { id:'aero_composite',tier:'t9',name:'Aerospace Composite',recipe:'Adv. Composite + Carbon Nanotube + Resins', uses:['Ultra-light high-rise frames','Precision infrastructure'], inputs:['adv_composite','carbon_nanotube','resins'] },
+  { id:'biomedical',  tier:'t9',name:'Biomedical Material', recipe:'Adv. Pharma + Ceramics + Adv. Composite',uses:['Synthetic organs','Implants','Next-gen hospitals'],           inputs:['adv_pharma','ceramics','adv_composite'] },
+  { id:'hydrogen_storage',tier:'t9',name:'Hydrogen Storage',recipe:'Carbon Fiber + Adv. Alloy + Fuel Cell', uses:['City-scale clean energy buffer','H2 distribution'],            inputs:['carbon_fiber','alloy','fuel_cell'] },
+  { id:'photovoltaic',tier:'t9', name:'Photovoltaic Film',  recipe:'Hi-Eff. Solar Cell + Adv. Composite + Resins', uses:['Building-integrated solar','Flexible solar surfaces'],  inputs:['solar_cell','adv_composite','resins'] },
+  { id:'smart_cable', tier:'t9',name:'Smart Cable',         recipe:'Superconductor + Fiber Optic + Adv. Alloy', uses:['Intelligent power grid','Zero-loss transmission'],         inputs:['superconductor','fiber_optic','alloy'] },
+
+  // ── TIER 10 — PINNACLE MATERIALS ─────────────────────────────────────────
+  { id:'graphene',    tier:'t10',name:'Graphene',           recipe:'Carbon Fiber + Energy (extreme precision)', uses:['Ultra-thin electronics','Strongest known material','Next-gen batteries'], inputs:['carbon_fiber','energy'] },
+  { id:'meta_material',tier:'t10',name:'Metamaterial',      recipe:'Carbon Nanotube + Ceramics + Rare Metals + Energy', uses:['Acoustic dampening','Precision sensors','Structural coating'], inputs:['carbon_nanotube','ceramics','rare_metals','energy'] },
+  { id:'synthetic_bio',tier:'t10',name:'Synthetic Biology', recipe:'Biomedical + Adv. Pharma + Purified Water',uses:['Synthetic food','Lab-grown materials','Disease immunity'],   inputs:['biomedical','adv_pharma','purified_water'] },
+  { id:'quantum_dot', tier:'t10',name:'Quantum Dot',        recipe:'Graphene + Rare Metals + Energy',          uses:['Next-gen displays','Medical imaging','Quantum computing components'], inputs:['graphene','rare_metals','energy'] },
+  { id:'smart_glass', tier:'t10',name:'Smart Glass',        recipe:'Photovoltaic Film + Electronics + Graphene',uses:['Self-tinting windows','Building-integrated power generation'], inputs:['photovoltaic','electronics','graphene'] },
+  { id:'ultra_battery',tier:'t10',name:'Ultra-Density Battery',recipe:'Solid-State Battery + Graphene + Rare Metals', uses:['City-scale energy independence','Full grid backup'],  inputs:['solid_battery','graphene','rare_metals'] },
+];
+
+const tierDef = [
+  { id:'t0',  label:'Tier 0',  sub:'World\nResources' },
+  { id:'te',  label:'Energy',  sub:'Player\'s\nchoice' },
+  { id:'t1',  label:'Tier 1',  sub:'Basic\nProcessed' },
+  { id:'t2',  label:'Tier 2',  sub:'Industrial' },
+  { id:'t3',  label:'Tier 3',  sub:'Refined' },
+  { id:'t4',  label:'Tier 4',  sub:'Processed\nGoods' },
+  { id:'t5',  label:'Tier 5',  sub:'Components' },
+  { id:'t6',  label:'Tier 6',  sub:'Advanced\nMaterials' },
+  { id:'t7',  label:'Tier 7',  sub:'Precision\nGoods' },
+  { id:'t8',  label:'Tier 8',  sub:'High-Tech' },
+  { id:'t9',  label:'Tier 9',  sub:'Cutting\nEdge' },
+  { id:'t10', label:'Tier 10', sub:'Pinnacle\nMaterials' },
+];
+
+const nodeMap = {};
+nodes.forEach(n => nodeMap[n.id] = n);
+const downstream = {};
+nodes.forEach(n => downstream[n.id] = []);
+nodes.forEach(n => n.inputs.forEach(inp => { if (downstream[inp]) downstream[inp].push(n.id); }));
+
+const treeEl = document.getElementById('tree');
+const elMap = {};
+
+tierDef.forEach(tier => {
+  const tierNodes = nodes.filter(n => n.tier === tier.id);
+  if (!tierNodes.length) return;
+  const row = document.createElement('div');
+  row.className = 'tier-row';
+  const label = document.createElement('div');
+  label.className = `tier-label ${tier.id}`;
+  label.innerHTML = `<div class="tier-name">${tier.label}</div><div class="tier-sub">${tier.sub.replace('\n','<br>')}</div>`;
+  row.appendChild(label);
+  const nodesEl = document.createElement('div');
+  nodesEl.className = 'nodes';
+  tierNodes.forEach(node => {
+    const el = document.createElement('div');
+    el.className = `node ${node.tier}`;
+    el.dataset.id = node.id;
+    const card = document.createElement('div');
+    card.className = 'node-card';
+    card.textContent = node.name;
+    const recipe = document.createElement('div');
+    recipe.className = 'node-recipe';
+    recipe.textContent = node.recipe;
+    el.appendChild(card);
+    el.appendChild(recipe);
+    nodesEl.appendChild(el);
+    elMap[node.id] = el;
+  });
+  row.appendChild(nodesEl);
+  treeEl.appendChild(row);
+});
+
+const canvas = document.getElementById('line-canvas');
+const ctx = canvas.getContext('2d');
+const wrap = document.getElementById('tree-wrap');
+
+function resizeCanvas() {
+  canvas.width  = wrap.scrollWidth;
+  canvas.height = wrap.scrollHeight;
+  canvas.style.width  = wrap.scrollWidth  + 'px';
+  canvas.style.height = wrap.scrollHeight + 'px';
+}
+
+function getCenter(el) {
+  const card = el.querySelector('.node-card');
+  const wrapRect = wrap.getBoundingClientRect();
+  const r = card.getBoundingClientRect();
+  const st = window.scrollY;
+  return {
+    x: r.left - wrapRect.left + r.width / 2,
+    y: r.top + st - (wrapRect.top + st) + r.height / 2
+  };
+}
+
+function drawLines(activeId, relatedIds, color) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!activeId) return;
+  const from = getCenter(elMap[activeId]);
+  ctx.beginPath();
+  ctx.arc(from.x, from.y, 5, 0, Math.PI*2);
+  ctx.fillStyle = color; ctx.globalAlpha = 0.9; ctx.fill(); ctx.globalAlpha = 1;
+  relatedIds.forEach(rid => {
+    if (!elMap[rid]) return;
+    const to = getCenter(elMap[rid]);
+    const dx = to.x - from.x, dy = to.y - from.y;
+    ctx.beginPath();
+    ctx.moveTo(from.x, from.y);
+    ctx.bezierCurveTo(from.x+dx*0.1, from.y+dy*0.5, to.x-dx*0.1, to.y-dy*0.5, to.x, to.y);
+    ctx.strokeStyle = color; ctx.lineWidth = 1.5;
+    ctx.globalAlpha = 0.4; ctx.setLineDash([5,4]); ctx.stroke();
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(to.x, to.y, 3, 0, Math.PI*2);
+    ctx.fillStyle = color; ctx.globalAlpha = 0.75; ctx.fill(); ctx.globalAlpha = 1;
+  });
+}
+
+const tooltip = document.getElementById('tooltip');
+
+function setHighlight(activeId) {
+  if (!activeId) {
+    Object.values(elMap).forEach(el => el.classList.remove('dimmed','highlighted'));
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    tooltip.classList.remove('visible');
+    return;
+  }
+  const node = nodeMap[activeId];
+  const related = new Set([...node.inputs, ...downstream[activeId]]);
+  Object.keys(elMap).forEach(id => {
+    const el = elMap[id];
+    if (id === activeId || related.has(id)) {
+      el.classList.remove('dimmed'); el.classList.add('highlighted');
+    } else {
+      el.classList.add('dimmed'); el.classList.remove('highlighted');
+    }
+  });
+  drawLines(activeId, [...related], TC[node.tier] || '#fff');
+}
+
+Object.keys(elMap).forEach(id => {
+  const el = elMap[id];
+  const node = nodeMap[id];
+  el.addEventListener('mouseenter', () => {
+    resizeCanvas(); setHighlight(id);
+    tooltip.innerHTML = `
+      <div class="tooltip-name">${node.name}</div>
+      <div class="tooltip-recipe">= ${node.recipe}</div>
+      <div class="tooltip-uses"><span>Unlocks / Used In</span>${node.uses.map(u=>`• ${u}`).join('<br>')}</div>`;
+    tooltip.classList.add('visible');
+  });
+  el.addEventListener('mousemove', e => {
+    tooltip.style.left = Math.min(e.clientX+16, window.innerWidth-310)+'px';
+    tooltip.style.top  = Math.min(e.clientY-10,  window.innerHeight-210)+'px';
+  });
+  el.addEventListener('mouseleave', () => { setHighlight(null); });
+});
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+</script>
+</body>
+</html>
