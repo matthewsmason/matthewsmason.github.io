@@ -62,6 +62,8 @@ Maps are procedurally generated so no two games are identical. The generator is 
 
 Resources are organized into tiers. Higher tiers are manufactured from lower tiers and require increasing infrastructure investment to produce and transport.
 
+See an example resource tree here: ![[combo_tree.html]]
+
 > **Land** is an implicit Tier 0 resource — never listed but always consumed. As the city expands, land available for extraction and manufacturing shrinks, creating natural pressure on expansion decisions.
 
 ### 4.1 Tier 0 — World Resources
@@ -104,13 +106,14 @@ Produced in factories from Tier 0 inputs. All factories require energy, water, a
 
 As the city grows and citizens become more educated, higher-tier manufacturing unlocks. These are illustrative, not exhaustive.
 
-| Tier | Example Products | Notes |
-|---|---|---|
-| Tier 2 | Electronics (Sand + Metal + Glass) | Enables computers, advanced machinery |
-| Tier 2 | Vehicles (Metal + Fuel) | Unlocks better transport options |
-| Tier 3 | Solar Panels (Electronics + Glass) | Unlocks clean energy production |
-| Tier 3 | Advanced Construction (Concrete + Electronics) | High-density buildings |
-| Tier 4 | Nuclear Components (Metal + Electronics) | Late-game high-output energy |
+| Tier   | Example Products                               | Notes                                 |
+| ------ | ---------------------------------------------- | ------------------------------------- |
+| Tier 2 | Electronics (Sand + Metal + Glass)             | Enables computers, advanced machinery |
+| Tier 2 | Vehicles (Metal + Fuel)                        | Unlocks better transport options      |
+| Tier 3 | Solar Panels (Electronics + Glass)             | Unlocks clean energy production       |
+| Tier 3 | Advanced Construction (Concrete + Electronics) | High-density buildings                |
+| Tier 4 | Nuclear Components (Metal + Electronics)       | Late-game high-output energy          |
+|        |                                                |                                       |
 
 ---
 
