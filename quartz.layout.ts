@@ -35,18 +35,38 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-		folderClickBehavior: "collapse",
-		const pinned = ["about", "journal"];
-	}),
+      folderClickBehavior: "collapse",
+      sortFn: (a, b) => {
+        if (!a.slugSegment || !b.slugSegment) return 0;
+
+        const pinned = ["about", "journal"];
+        const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
+        const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
+
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+
+        const inReflections = (node: typeof a) =>
+          node.slug?.toLowerCase().startsWith("pages/reflections/");
+
+        if (inReflections(a) && inReflections(b)) {
+          return b.slugSegment.localeCompare(a.slugSegment);
+        }
+
+        return a.displayName.localeCompare(b.displayName);
+      },
+      filterFn: (node) => node.name !== "Assets",
+    }),
   ],
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-	Component.Backlinks(),
+    Component.Backlinks(),
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -62,9 +82,29 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-		folderClickBehavior: "collapse",
-		const pinned = ["about", "journal"];
-	}),
+      folderClickBehavior: "collapse",
+      sortFn: (a, b) => {
+        if (!a.slugSegment || !b.slugSegment) return 0;
+
+        const pinned = ["about", "journal"];
+        const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
+        const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
+
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+
+        const inReflections = (node: typeof a) =>
+          node.slug?.toLowerCase().startsWith("pages/reflections/");
+
+        if (inReflections(a) && inReflections(b)) {
+          return b.slugSegment.localeCompare(a.slugSegment);
+        }
+
+        return a.displayName.localeCompare(b.displayName);
+      },
+      filterFn: (node) => node.name !== "Assets",
+    }),
   ],
   right: [],
 }
