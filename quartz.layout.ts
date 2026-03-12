@@ -36,20 +36,6 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({
 		folderClickBehavior: "collapse",
-		sortFn: (a, b) => {
-		  if (!a.slugSegment || !b.slugSegment) return 0;
-
-		  const pinned = ["about", "journal"];
-		  const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
-		  const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
-
-		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-		  if (aIndex !== -1) return -1;
-		  if (bIndex !== -1) return 1;
-
-		  return a.displayName.localeCompare(b.displayName);
-		},
-		filterFn: (node) => node.name !== "Assets",
 	}),
   ],
   right: [
