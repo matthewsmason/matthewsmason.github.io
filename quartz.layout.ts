@@ -92,7 +92,8 @@ export const defaultListPageLayout: PageLayout = {
 			node.slug?.toLowerCase().startsWith("pages/reflections/");
 
 		  if (inReflections(a) && inReflections(b)) {
-			return b.slugSegment.localeCompare(a.slugSegment);
+		    console.log("a.slug:", a.slug, "b.slug:", b.slug);
+		    return b.slugSegment.localeCompare(a.slugSegment);
 		  }
 
 		  return a.displayName.localeCompare(b.displayName);
