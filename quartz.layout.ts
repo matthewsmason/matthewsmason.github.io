@@ -36,26 +36,26 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({
       folderClickBehavior: "collapse",
-      sortFn: (a, b) => {
-        if (!a.slugSegment || !b.slugSegment) return 0;
+		sortFn: (a, b) => {
+		  if (!a.slugSegment || !b.slugSegment) return 0;
 
-        const pinned = ["about", "journal"];
-        const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
-        const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
+		  const pinned = ["about", "journal"];
+		  const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
+		  const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
 
-        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-        if (aIndex !== -1) return -1;
-        if (bIndex !== -1) return 1;
+		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		  if (aIndex !== -1) return -1;
+		  if (bIndex !== -1) return 1;
 
-        const inReflections = (node: typeof a) =>
-          node.slug?.toLowerCase().startsWith("pages/reflections/");
+		  if (
+			a.slug?.toLowerCase().startsWith("pages/reflections/") &&
+			b.slug?.toLowerCase().startsWith("pages/reflections/")
+		  ) {
+			return b.slugSegment.localeCompare(a.slugSegment);
+		  }
 
-        if (inReflections(a) && inReflections(b)) {
-          return b.slugSegment.localeCompare(a.slugSegment);
-        }
-
-        return a.displayName.localeCompare(b.displayName);
-      },
+		  return a.displayName.localeCompare(b.displayName);
+		},
       filterFn: (node) => node.name !== "Assets",
     }),
   ],
@@ -83,26 +83,26 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
       folderClickBehavior: "collapse",
-      sortFn: (a, b) => {
-        if (!a.slugSegment || !b.slugSegment) return 0;
+		sortFn: (a, b) => {
+		  if (!a.slugSegment || !b.slugSegment) return 0;
 
-        const pinned = ["about", "journal"];
-        const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
-        const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
+		  const pinned = ["about", "journal"];
+		  const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
+		  const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
 
-        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-        if (aIndex !== -1) return -1;
-        if (bIndex !== -1) return 1;
+		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		  if (aIndex !== -1) return -1;
+		  if (bIndex !== -1) return 1;
 
-        const inReflections = (node: typeof a) =>
-          node.slug?.toLowerCase().startsWith("pages/reflections/");
+		  if (
+			a.slug?.toLowerCase().startsWith("pages/reflections/") &&
+			b.slug?.toLowerCase().startsWith("pages/reflections/")
+		  ) {
+			return b.slugSegment.localeCompare(a.slugSegment);
+		  }
 
-        if (inReflections(a) && inReflections(b)) {
-          return b.slugSegment.localeCompare(a.slugSegment);
-        }
-
-        return a.displayName.localeCompare(b.displayName);
-      },
+		  return a.displayName.localeCompare(b.displayName);
+		},
       filterFn: (node) => node.name !== "Assets",
     }),
   ],
