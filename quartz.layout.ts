@@ -76,7 +76,6 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
 		folderClickBehavior: "collapse",
-		const pinned = ["about", "journal"];
 	}),
   ],
   right: [],
