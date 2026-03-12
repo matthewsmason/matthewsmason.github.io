@@ -76,29 +76,7 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
 		folderClickBehavior: "collapse",
-		sortFn: (a, b) => {
-		  if (!a.slugSegment || !b.slugSegment) return 0;
-
-		  const pinned = ["about", "journal"];
-		  const aIndex = pinned.indexOf(a.slugSegment.toLowerCase());
-		  const bIndex = pinned.indexOf(b.slugSegment.toLowerCase());
-
-		  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-		  if (aIndex !== -1) return -1;
-		  if (bIndex !== -1) return 1;
-
-		  // Date-descending sort within Pages/Reflections
-		  const inReflections = (node: typeof a) =>
-			node.slug?.toLowerCase().startsWith("pages/reflections/");
-
-		  if (inReflections(a) && inReflections(b)) {
-		    console.log("a.slug:", a.slug, "b.slug:", b.slug);
-		    return b.slugSegment.localeCompare(a.slugSegment);
-		  }
-
-		  return a.displayName.localeCompare(b.displayName);
-		},
-		filterFn: (node) => node.name !== "Assets",
+		const pinned = ["about", "journal"];
 	}),
   ],
   right: [],
