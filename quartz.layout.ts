@@ -87,6 +87,14 @@ export const defaultListPageLayout: PageLayout = {
 		  if (aIndex !== -1) return -1;
 		  if (bIndex !== -1) return 1;
 
+		  // Date-descending sort within Pages/Reflections
+		  const inReflections = (node: typeof a) =>
+			node.slug?.toLowerCase().startsWith("pages/reflections/");
+
+		  if (inReflections(a) && inReflections(b)) {
+			return b.slugSegment.localeCompare(a.slugSegment);
+		  }
+
 		  return a.displayName.localeCompare(b.displayName);
 		},
 		filterFn: (node) => node.name !== "Assets",
