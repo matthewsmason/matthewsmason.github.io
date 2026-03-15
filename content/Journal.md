@@ -34,5 +34,6 @@ _Thoughts worth returning to._
 - [[2026-02-23]] - Church Talks on Evolution Deep-dive
 - [[2026-02-24]] - The Church's COVID-19 Response
 - [[2026-03-02]] - Why Your Children Left Religion
+- [[2026-03-15]] - What is Truth?
 
 ---
