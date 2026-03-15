@@ -20,6 +20,8 @@ These are just a few of the resources I’ve watched, listened to, or read that 
 
 [@cosmicskeptic | Alex O’Connor](https://youtube.com/@cosmicskeptic)
 
+[@DarkMatter2525](https://www.youtube.com/@DarkMatter2525)
+
 [@earbiscuits](https://www.youtube.com/@earbiscuits)
 
 [@JakeDoubleyoo](https://youtube.com/@JakeDoubleyoo)
