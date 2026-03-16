@@ -1,0 +1,53 @@
+.base-table-wrapper {
+  margin: 1.5rem 0;
+
+  // Override .table-container scroll added by Quartz's jsx wrapper
+  .table-container {
+    overflow-x: visible !important;
+  }
+
+  .base-table-caption {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+  }
+
+  table.base-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+
+    tbody {
+      line-height: 1.15;
+    }
+
+    thead {
+      display: none !important;
+    }
+
+    th,
+    td {
+      padding: 0.2rem 0.7rem;
+      text-align: left;
+      line-height: 1.15;
+      border: none !important;
+      border-right: none !important;
+      border-bottom: none !important;
+    }
+
+    tr {
+      border: none !important;
+      border-bottom: none !important;
+    }
+
+    td a.internal {
+      font-weight: 500;
+    }
+
+    tbody tr:hover {
+      background: var(--lightgray);
+      opacity: 0.85;
+    }
+  }
+}

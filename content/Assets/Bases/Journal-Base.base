@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: Entries
+    filters:
+      and:
+        - file.folder == "Pages/Entries"
+  - type: table
+    name: Reflections
+    filters:
+      and:
+        - file.folder == "Pages/Reflections"
+    order:
+      - file.name
+      - description
+    sort:
+      - property: file.name
+        direction: DESC
