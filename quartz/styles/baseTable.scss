@@ -41,6 +41,11 @@
       border-bottom: none !important;
     }
 
+    // First column: no word wrap
+    td:first-child {
+      white-space: nowrap;
+    }
+
     td a.internal {
       font-weight: 500;
     }
