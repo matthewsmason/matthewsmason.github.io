@@ -1,9 +1,18 @@
 .base-table-wrapper {
   margin: 1.5rem 0;
 
-  // Override .table-container scroll added by Quartz's jsx wrapper
+  // Override .table-container styles added by Quartz's jsx wrapper
   .table-container {
     overflow-x: visible !important;
+
+    & > table {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    td {
+      min-width: 0 !important;
+    }
   }
 
   .base-table-caption {
