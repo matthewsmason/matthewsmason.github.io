@@ -4,15 +4,8 @@
   // Override .table-container styles added by Quartz's jsx wrapper
   .table-container {
     overflow-x: visible !important;
-
-    & > table {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    td {
-      min-width: 0 !important;
-    }
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .base-table-caption {
@@ -23,9 +16,11 @@
   }
 
   table.base-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: none;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
     tbody {
       line-height: 1.15;
@@ -37,22 +32,21 @@
 
     th,
     td {
-      padding: 0.2rem 0.7rem;
-      text-align: left;
-      line-height: 1.15;
+      padding: 0.2rem 0.7rem !important;
+      text-align: left !important;
+      line-height: 1.15 !important;
       border: none !important;
-      border-right: none !important;
-      border-bottom: none !important;
+      min-width: 0 !important;
     }
 
     tr {
       border: none !important;
-      border-bottom: none !important;
     }
 
-    // First column: no word wrap
-    td:first-child {
-      white-space: nowrap;
+    // First column: shrink to fit content, no word wrap
+    td:first-child,
+    td:first-child a {
+      white-space: nowrap !important;
     }
 
     td a.internal {
