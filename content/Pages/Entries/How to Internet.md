@@ -15,41 +15,42 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 
 ### uBlock Origin Lite
 
-| ![[ublock-origin.png]] | This extension removes annoying ads. A must have for visiting most websites these days.<br><br>Install [uBlock Origin Lite](https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh?utm_source=item-share-cb) |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[ublock-origin.png]] | This extension removes annoying ads. A must have for visiting most websites these days.<br><br>Chrome: [uBlock Origin Lite](https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh?utm_source=item-share-cb)<br>Firefox: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ### Remove Paywalls
 
-| ![[remove-paywalls-logo.png]] | It's not often I'm browsing a page with a paywall, but when they do come up this handy little extension is able to remove them.<br><br>Install [Remove Paywalls](https://chromewebstore.google.com/detail/ghkdkllgoehcklnpajjjmfoaokabfdfm?utm_source=item-share-cb) |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[remove-paywalls-logo.png]] | It's not often I'm browsing a page with a paywall, but when they do come up this handy little extension is able to remove them.<br><br>Chrome: [Remove Paywalls](https://chromewebstore.google.com/detail/ghkdkllgoehcklnpajjjmfoaokabfdfm?utm_source=item-share-cb)<br>Firefox: [Remove Paywall](https://addons.mozilla.org/en-US/firefox/addon/remove-paywall/) |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 # Shopping
 
 ### Keepa™ - Amazon Price Tracker
 
-| ![[keepa-logo.png]] | Keepa™ provides price history graph straight on the product page of any Amazon listing.<br><br>Install [Keepa™](https://chromewebstore.google.com/detail/neebplgakaahbhdphmkckjjcegoiijjo?utm_source=item-share-cb) |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
+| ![[keepa-logo.png]] | Keepa™ provides price history graph straight on the product page of any Amazon listing.<br><br>Chrome: [Keepa™](https://chromewebstore.google.com/detail/neebplgakaahbhdphmkckjjcegoiijjo?utm_source=item-share-cb)<br>Firefox: [Keepa](https://addons.mozilla.org/en-US/firefox/addon/keepa/) |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ### SteamDB
 
-| ![[steamdb-logo.png]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats.<br><br>Install [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb) |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[steamdb-logo.png]] | SteamDB provides a bunch of enhancements to the [Steam Store](https://store.steampowered.com/) such as seeing the historical low price of games and player stats.<br><br>Chrome: [SteamDB](https://chromewebstore.google.com/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=item-share-cb)<br>Firefox: [SteamDB](https://addons.mozilla.org/en-US/firefox/addon/steam-database/) |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ### Augmented Steam
 
-| ![[augmented-steam-logo.png]] | Augmented Steam is similar to *SteamDB*, but provides more historical price data and search enhancements.<br><br>Install [Augmented Steam](https://chromewebstore.google.com/detail/dnhpnfgdlenaccegplpojghhmaamnnfp?utm_source=item-share-cb) |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[augmented-steam-logo.png]] | Augmented Steam is similar to *SteamDB*, but provides more historical price data and search enhancements.<br><br>Chrome: [Augmented Steam](https://chromewebstore.google.com/detail/dnhpnfgdlenaccegplpojghhmaamnnfp?utm_source=item-share-cb)<br>Firefox: [Augmented Steam](https://addons.mozilla.org/en-US/firefox/addon/augmented-steam/) |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ### ProtonDB for Steam
 
-| ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck!<br><br>Install [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb) |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[protondb-logo.png]] | This extension displays Linux compatibility information on Steam Store product pages. Useful for those who use Linux or a Steam Deck!<br><br>Chrome: [ProtonDB for Steam](https://chromewebstore.google.com/detail/ngonfifpkpeefnhelnfdkficaiihklid?utm_source=item-share-cb)<br>Firefox: [ProtonDB for Steam](https://addons.mozilla.org/en-US/firefox/addon/protondb-for-steam/) |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-# [[YouTube]] & Twitch
+# YouTube & Twitch
 
 ### Enhancer for YouTube™
 
 | ![[enhancer-for-youtube.png]] | YouTube does some annoying things with their UI sometimes. This extension allows you to customize YouTube with a ton of settings.<br><br>To quickly customize YouTube with my favorite settings, follow these steps: |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-1. Install [Enhancer for YouTube™](https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle?utm_source=item-share-cb)
+1. Install
+	 * **Chrome:** [Enhancer for YouTube™](https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle?utm_source=item-share-cb)
+	 * **Firefox:**   [Enhancer for YouTube™](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/)
 2. Navigate to your extensions page (usually a *puzzle* icon).
 3. Find Enhancer for YouTube™ in your list of installed extensions and click details.
 4. Go to "Extension options".
@@ -196,29 +197,31 @@ Browsing online can be difficult and annoying. Ads, scams, bad user interfaces, 
 9. You're done! Enjoy some slight changes to YouTube.
 
 ---
-### SponsorBlock for YouTube - Skip Sponsorships
+### SponsorBlock for YouTube - Skip Sponsorship's
 
-| ![[sponsor-block.png]] | This extension fast forwards videos past annoying sponsorship segments. It's community driven, so once enough people report the sponsor segments, it will mark that segment of the video in green. When the play head reaches that part of the video, it will automatically skip forward!<br><br>Install [SponsorBlock for YouTube](https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone?utm_source=item-share-cb) and you're done! |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[sponsor-block.png]] | This extension fast forwards videos past annoying sponsorship segments. It's community driven, so once enough people report the sponsor segments, it will mark that segment of the video in green. When the play head reaches that part of the video, it will automatically skip forward!<br><br>Chrome: [SponsorBlock for YouTube](https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone?utm_source=item-share-cb)<br>Firefox:   [SponsorBlock - Skip Sponsorship's on YouTube](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/) |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ### Return YouTube Dislike
 
-| ![[return-youtube-dislike.png]] | Why did YouTube get rid of the dislike button? I have no idea. But this extension brings it back! And that's it.<br><br>Install [Return YouTube Dislike](https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi?utm_source=item-share-cb) and that's it! |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[return-youtube-dislike.png]] | Why did YouTube get rid of the dislike button? I have no idea. But this extension brings it back! And that's it.<br><br>Chrome: [Return YouTube Dislike](https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi?utm_source=item-share-cb) <br>Firefox:   [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/) |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### BetterTTV
 
 | ![[betterttv.png]] | This extension is a must if you watch Twitch, especially for the drops as this extension automatically claims channel points bonuses, drops, and moments! |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-1. Install [BetterTTV](https://chromewebstore.google.com/detail/ajopnjidmegmdimjlfnijceegpefgped?utm_source=item-share-cb)
+1. Install 
+   - **Chrome:** [BetterTTV](https://chromewebstore.google.com/detail/ajopnjidmegmdimjlfnijceegpefgped?utm_source=item-share-cb)
+   - **Firefox:**   [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv/)
 2. To enable settings, navigate to [twitch.tv](https://www.twitch.tv/)
 3. Watch any streamer and click the gear icon right below the chat box on the bottom right.
 4. Click on "BetterTTV Settings" in the pop-up menu.
    
    ![[betterttv-menu.png|316]]
    
-1. From there, you can enable settings like Auto Claim.
+5. From there, you can enable settings like Auto Claim.
    ![[betterttv-settings-panel.png|636]]
    
-2. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
-3. Enjoy!
+6. Sometimes the extension will glitch out on first enable. Be sure to *restart your browser* after enabling settings. 
+7. Enjoy!
