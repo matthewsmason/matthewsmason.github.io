@@ -7,6 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
+    links: {},
   }),
 }
 
@@ -56,7 +57,7 @@ export const defaultContentPageLayout: PageLayout = {
 
 		  return a.displayName.localeCompare(b.displayName);
 		},
-      filterFn: (node) => node.name !== "Assets",
+      filterFn: (node) => node.slugSegment !== "Assets",
     }),
   ],
   right: [
@@ -103,7 +104,7 @@ export const defaultListPageLayout: PageLayout = {
 
 		  return a.displayName.localeCompare(b.displayName);
 		},
-      filterFn: (node) => node.name !== "Assets",
+      filterFn: (node) => node.slugSegment !== "Assets",
     }),
   ],
   right: [],

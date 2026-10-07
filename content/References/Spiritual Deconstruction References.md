@@ -141,3 +141,7 @@ Below is a list of the talks featured in the video [*Latter-day Prophets Speak o
 - **[41:37](http://www.youtube.com/watch?v=MiebbpNqpDs&t=2497) Jeffrey R. Holland** – _"Where Justice, Love, and Mercy Meet"_ (General Conference, April 2015)
     
     - **Link:** [ChurchofJesusChrist.org](https://www.churchofjesuschrist.org/study/general-conference/2015/04/where-justice-love-and-mercy-meet?lang=eng)
+
+# Other Useful Links
+
+Wells, Steve. "What The Bible Says About ..." _The Skeptic's Annotated Bible_, 1999-2026, [www.skepticsannotatedbible.com/says_about/index.html](http://www.skepticsannotatedbible.com/says_about/index.html). Accessed 30 June 2026.

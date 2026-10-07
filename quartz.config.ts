@@ -20,6 +20,7 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
 	theme: {
+	  fontOrigin: "googleFonts",
 	  cdnCaching: true,
 	  typography: {
 		header: "Plus Jakarta Sans",
@@ -36,6 +37,7 @@ const config: QuartzConfig = {
 		  secondary: "#0079d9",
 		  tertiary: "#005faa",
 		  highlight: "rgba(0, 121, 217, 0.08)",
+		  textHighlight: "#fff23688",
 		},
 		darkMode: {
 		  light: "#1e1f22",
@@ -46,6 +48,7 @@ const config: QuartzConfig = {
 		  secondary: "#4493f8",
 		  tertiary: "#2f7de0",
 		  highlight: "rgba(68, 147, 248, 0.1)",
+		  textHighlight: "#b3aa0288",
 		},
 	  },
 	},

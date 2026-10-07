@@ -32,14 +32,12 @@ interface BaseFile {
 interface Options {
   /**
    * Path to the content directory (relative to the quartz root).
-   * Defaults to "content".
+   * Defaults to the directory Quartz is building from (`-d`, usually "content").
    */
-  contentDir: string
+  contentDir?: string
 }
 
-const defaultOptions: Options = {
-  contentDir: "content",
-}
+const defaultOptions: Options = {}
 
 // ────────────────────────────────────────────────────────────────────────────
 // Utility: extract display text from any link format
@@ -145,7 +143,7 @@ function slugifyViewName(name: string): string {
 
 function evaluateFilter(
   filter: string,
-  fileSlug: string,
+  _fileSlug: string,
   filePath: string,
   frontmatter: Record<string, any>,
 ): boolean {
@@ -696,7 +694,7 @@ export const ObsidianBases: QuartzTransformerPlugin<Partial<Options>> = (userOpt
           return (tree: Root, file) => {
             const currentSlug = file.data.slug!
             const allSlugs = ctx.allSlugs
-            const contentDir = path.resolve(opts.contentDir)
+            const contentDir = path.resolve(opts.contentDir ?? ctx.argv.directory)
 
             visit(tree, "element", (node, index, parent) => {
               // ─── Case 1: Wikilink-style transclusion ───

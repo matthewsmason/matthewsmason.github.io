@@ -104,3 +104,9 @@ A collection of quotes that resonate with me.
 
 >[!quote] Consistency is the playground of dull minds.
 * [[Yuval Noah Harari]], *Sapiens; A Brief History of Humankind*, pg 165. 
+
+>[!quote] Those who can make you believe absurdities can make you commit atrocities.” 
+* [[Voltaire]]
+
+>[!quote] I am against religion because it teaches us to be satisfied with not understanding the world.
+- [[Richard Dawkins]]
