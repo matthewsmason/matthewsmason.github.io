@@ -5,7 +5,8 @@ import {
   Simulation,
   forceSimulation,
   forceManyBody,
-  forceCenter,
+  forceX,
+  forceY,
   forceLink,
   forceCollide,
   forceRadial,
@@ -167,7 +168,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   // we virtualize the simulation and use pixi to actually render it
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
     .force("charge", forceManyBody().strength(-100 * repelForce))
-    .force("center", forceCenter().strength(centerForce))
+    // pull every node toward the middle (not just the centroid) so the graph stays round
+    .force("x", forceX().strength(centerForce))
+    .force("y", forceY().strength(centerForce))
     .force("link", forceLink(graphData.links).distance(linkDistance))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
@@ -511,7 +514,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
+          // labels fade in between 1x (hidden on open) and 1.5x (~3 scroll-wheel clicks)
+          let scaleOpacity = Math.min(Math.max((scale - 1) / 0.5, 0), 1)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {

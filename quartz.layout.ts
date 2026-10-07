@@ -61,7 +61,17 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: {
+        centerForce: 0.1,
+      },
+      globalGraph: {
+        repelForce: 3,
+        centerForce: 0.05,
+        linkDistance: 70,
+        enableRadial: false,
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
