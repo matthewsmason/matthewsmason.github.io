@@ -10,7 +10,7 @@ A collection of quotes that resonate with me.
 - [[Sir Isaac Newton]], Newton's Third Law; mathematician, physicist, astronomer, alchemist, theologian, and author (1642-1726)
 
 >[!quote] You are the universe experiencing itself.
-- [[Allen Watts]], Writer and lecturer (1915–1973)
+- [[Alan Watts]], Writer and lecturer (1915–1973)
 
 >[!quote] All models are wrong, but some are useful.
 - [[George E.P. Box]], British statistician (1919-2013)
